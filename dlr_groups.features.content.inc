@@ -1075,6 +1075,7 @@ function dlr_groups_content_default_fields() {
     'title' => 'optional',
     'title_value' => '',
     'enable_tokens' => 0,
+    'validate_url' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(

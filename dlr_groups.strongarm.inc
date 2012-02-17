@@ -5,132 +5,133 @@
  */
 function dlr_groups_strongarm() {
   $export = array();
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_focusgroup';
   $strongarm->value = '0';
-
   $export['comment_anonymous_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_project';
   $strongarm->value = '0';
-
   $export['comment_anonymous_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_controls_focusgroup';
   $strongarm->value = '3';
-
   $export['comment_controls_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_controls_project';
   $strongarm->value = '3';
-
   $export['comment_controls_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_focusgroup';
   $strongarm->value = '2';
-
   $export['comment_default_mode_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_project';
   $strongarm->value = '2';
-
   $export['comment_default_mode_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_order_focusgroup';
   $strongarm->value = '2';
-
   $export['comment_default_order_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_order_project';
   $strongarm->value = '2';
-
   $export['comment_default_order_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_focusgroup';
   $strongarm->value = '50';
-
   $export['comment_default_per_page_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_project';
   $strongarm->value = '50';
-
   $export['comment_default_per_page_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_focusgroup';
   $strongarm->value = '0';
-
   $export['comment_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_focusgroup';
   $strongarm->value = '1';
-
   $export['comment_form_location_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_project';
   $strongarm->value = '0';
-
   $export['comment_form_location_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_focusgroup';
   $strongarm->value = '1';
-
   $export['comment_preview_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_project';
   $strongarm->value = '0';
-
   $export['comment_preview_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_project';
   $strongarm->value = '0';
-
   $export['comment_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_focusgroup';
   $strongarm->value = '1';
-
   $export['comment_subject_field_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_project';
   $strongarm->value = '1';
-
   $export['comment_subject_field_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -155,8 +156,8 @@ function dlr_groups_strongarm() {
     'og_language' => '0',
     'og_private' => '4',
   );
-
   $export['content_extra_weights_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -181,22 +182,80 @@ function dlr_groups_strongarm() {
     'og_language' => '0',
     'og_private' => '19',
   );
-
   $export['content_extra_weights_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_focusgroup';
   $strongarm->value = '0';
-
   $export['language_content_type_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_project';
   $strongarm->value = '0';
-
   $export['language_content_type_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_allowchild_focusgroup';
+  $strongarm->value = array(
+    0 => 'project',
+  );
+  $export['nh_allowchild_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_allowchild_project';
+  $strongarm->value = array();
+  $export['nh_allowchild_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_createmenu_focusgroup';
+  $strongarm->value = 'optional_no';
+  $export['nh_createmenu_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_createmenu_project';
+  $strongarm->value = 'optional_no';
+  $export['nh_createmenu_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_defaultparent_focusgroup';
+  $strongarm->value = '';
+  $export['nh_defaultparent_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_defaultparent_project';
+  $strongarm->value = '';
+  $export['nh_defaultparent_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_multiple_focusgroup';
+  $strongarm->value = 0;
+  $export['nh_multiple_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nh_multiple_project';
+  $strongarm->value = 0;
+  $export['nh_multiple_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -204,8 +263,8 @@ function dlr_groups_strongarm() {
   $strongarm->value = array(
     0 => 'status',
   );
-
   $export['node_options_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -213,21 +272,49 @@ function dlr_groups_strongarm() {
   $strongarm->value = array(
     0 => 'status',
   );
-
   $export['node_options_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'og_content_type_usage_focusgroup';
+  $strongarm->value = 'group';
+  $export['og_content_type_usage_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'og_content_type_usage_project';
+  $strongarm->value = 'group';
+  $export['og_content_type_usage_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'og_max_groups_focusgroup';
+  $strongarm->value = '';
+  $export['og_max_groups_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'og_max_groups_project';
+  $strongarm->value = '';
+  $export['og_max_groups_project'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'upload_focusgroup';
   $strongarm->value = '1';
-
   $export['upload_focusgroup'] = $strongarm;
+
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'upload_project';
   $strongarm->value = '1';
-
   $export['upload_project'] = $strongarm;
+
   return $export;
 }
