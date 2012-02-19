@@ -849,9 +849,9 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'og_content_type_usage_book';
-  $strongarm->value = 'group_post_standard';
-  $export['og_content_type_usage_book'] = $strongarm;
+  $strongarm->name = 'og_content_type_usage_organisation';
+  $strongarm->value = 'omitted';
+  $export['og_content_type_usage_organisation'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
