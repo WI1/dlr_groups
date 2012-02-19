@@ -252,9 +252,10 @@ function dlr_groups_views_default_views() {
     'summary' => '',
   ));
   $handler = $view->new_display('page', 'Seite', 'page_1');
-  $handler->override_option('path', 'projekte');
+  $handler->override_option('title', 'Projekte im Förderschwerpunkt');
+  $handler->override_option('path', 'og/projekte');
   $handler->override_option('menu', array(
-    'type' => 'normal',
+    'type' => 'tab',
     'title' => 'Projekte',
     'description' => 'Übersicht über die Projekte des Förderschwerpunkts gruppiert nach Foksugruppen',
     'weight' => '-10',
@@ -268,6 +269,7 @@ function dlr_groups_views_default_views() {
     'name' => 'navigation',
   ));
   $translatables['dlr_groups_fg_projects'] = array(
+    t('Projekte im Förderschwerpunkt'),
     t('Seite'),
     t('Standards'),
   );

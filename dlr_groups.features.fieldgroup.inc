@@ -6,63 +6,6 @@
 function dlr_groups_fieldgroup_default_groups() {
   $groups = array();
 
-  // Exported group: group_details
-  $groups['focusgroup-group_details'] = array(
-    'group_type' => 'standard',
-    'type_name' => 'focusgroup',
-    'group_name' => 'group_details',
-    'label' => 'Details',
-    'settings' => array(
-      'form' => array(
-        'style' => 'fieldset',
-        'description' => '',
-      ),
-      'display' => array(
-        'description' => '',
-        'label' => 'above',
-        'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        '4' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        '2' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        '3' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        '5' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        'token' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-      ),
-    ),
-    'weight' => '-2',
-    'fields' => array(
-      '0' => 'field_projectlogo',
-      '1' => 'field_fgident',
-      '2' => 'field_focusgroup_speaker',
-      '3' => 'field_contactdlrpicture',
-      '4' => 'field_contactdlr',
-      '5' => 'field_contactbalance',
-      '6' => 'field_projects',
-      '7' => 'field_frontpageimage',
-    ),
-  );
-
   // Exported group: group_projectcontact
   $groups['project-group_projectcontact'] = array(
     'group_type' => 'standard',
@@ -71,17 +14,21 @@ function dlr_groups_fieldgroup_default_groups() {
     'label' => 'Kontakt',
     'settings' => array(
       'form' => array(
-        'style' => 'fieldset',
+        'style' => 'fieldset_collapsible',
         'description' => '',
       ),
       'display' => array(
         'description' => '',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'teaser' => array(
-          'format' => 'fieldset_collapsible',
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset_collapsible',
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         '4' => array(
@@ -96,6 +43,10 @@ function dlr_groups_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'mobile' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'token' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -103,15 +54,13 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '12',
+    'weight' => '38',
     'fields' => array(
       '0' => 'field_projecthomepage',
       '1' => 'field_project_rssfeed',
       '2' => 'field_projectaccount',
-      '3' => 'field_projectinstitutions',
-      '4' => 'field_ref_projectinstitutions',
-      '5' => 'field_valuepartner',
-      '6' => 'field_ref_valuepartner',
+      '3' => 'field_ref_projectinstitutions',
+      '4' => 'field_ref_valuepartner',
     ),
   );
 
@@ -123,17 +72,21 @@ function dlr_groups_fieldgroup_default_groups() {
     'label' => 'Forschungsausrichtung',
     'settings' => array(
       'form' => array(
-        'style' => 'fieldset',
+        'style' => 'fieldset_collapsible',
         'description' => '',
       ),
       'display' => array(
         'description' => '',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'teaser' => array(
-          'format' => 'fieldset_collapsible',
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset_collapsible',
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         '4' => array(
@@ -148,6 +101,10 @@ function dlr_groups_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'mobile' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'token' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -155,12 +112,16 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '11',
+    'weight' => '37',
     'fields' => array(
-      '0' => 'field_researchquestions',
-      '1' => 'field_projecttheories',
-      '2' => 'field_projectapproach',
-      '3' => 'field_projecttechniques',
+      '0' => 'field_projektgoals',
+      '1' => 'field_synopsis',
+      '2' => 'field_steckbrief',
+      '3' => 'field_projectmembers',
+      '4' => 'field_researchquestions',
+      '5' => 'field_projecttheories',
+      '6' => 'field_projectapproach',
+      '7' => 'field_projecttechniques',
     ),
   );
 
@@ -172,17 +133,21 @@ function dlr_groups_fieldgroup_default_groups() {
     'label' => 'Projektinformationen',
     'settings' => array(
       'form' => array(
-        'style' => 'fieldset',
+        'style' => 'fieldset_collapsible',
         'description' => '',
       ),
       'display' => array(
         'description' => '',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'teaser' => array(
-          'format' => 'fieldset_collapsible',
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset_collapsible',
+          'format' => 'fieldset',
           'exclude' => 0,
         ),
         '4' => array(
@@ -197,6 +162,10 @@ function dlr_groups_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'mobile' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'token' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -204,21 +173,16 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '8',
+    'weight' => '36',
     'fields' => array(
-      '0' => 'field_projectident',
+      '0' => 'field_projectfkz',
       '1' => 'field_projectlogo',
-      '2' => 'field_projectfkz',
-      '3' => 'field_projektgoals',
-      '4' => 'field_synopsis',
-      '5' => 'field_steckbrief',
-      '6' => 'field_projectmembers',
+      '2' => 'field_project_fg_membership',
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Details');
   t('Forschungsausrichtung');
   t('Kontakt');
   t('Projektinformationen');
