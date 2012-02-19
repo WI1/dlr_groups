@@ -68,7 +68,7 @@ function dlr_groups_content_default_fields() {
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Farbcode',
-      'weight' => '27',
+      'weight' => '14',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -137,7 +137,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Betreuung BALANCE',
-      'weight' => '20',
+      'weight' => '16',
       'description' => '',
       'type' => 'userreference_autocomplete',
       'module' => 'userreference',
@@ -185,7 +185,7 @@ function dlr_groups_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
@@ -195,15 +195,15 @@ function dlr_groups_content_default_fields() {
       'default_value' => array(
         '0' => array(
           'value' => '',
-          'format' => '1',
+          'format' => '5',
           '_error_element' => 'default_value_widget][field_contactdlr][0][value',
         ),
       ),
       'default_value_php' => NULL,
       'label' => 'Betreuung DLR',
-      'weight' => '19',
+      'weight' => '17',
       'description' => '',
-      'type' => 'text_textarea',
+      'type' => 'text_textfield',
       'module' => 'text',
     ),
   );
@@ -331,7 +331,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Kürzel',
-      'weight' => '15',
+      'weight' => '13',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -406,7 +406,7 @@ function dlr_groups_content_default_fields() {
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Fokusgruppensprecher',
-      'weight' => '17',
+      'weight' => '15',
       'description' => '',
       'type' => 'userreference_autocomplete',
       'module' => 'userreference',
@@ -472,7 +472,7 @@ function dlr_groups_content_default_fields() {
       'default_image' => NULL,
       'use_default_image' => NULL,
       'label' => 'Hintergrundbild für die Startseite',
-      'weight' => '22',
+      'weight' => '20',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -550,7 +550,7 @@ function dlr_groups_content_default_fields() {
       ),
       'use_default_image' => 1,
       'label' => 'Projektlogo',
-      'weight' => '14',
+      'weight' => '19',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -686,10 +686,511 @@ function dlr_groups_content_default_fields() {
     'widget' => array(
       'force_default' => 0,
       'label' => 'Projekte',
-      'weight' => '21',
+      'weight' => 0,
       'description' => '',
       'type' => 'viewfield_select',
       'module' => 'viewfield',
+    ),
+  );
+
+  // Exported field: field_companylogo
+  $fields['organisation-field_companylogo'] = array(
+    'field_name' => 'field_companylogo',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '33',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      'email_plain' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      'email_html' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'filefield',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'filefield',
+    'active' => '1',
+    'list_field' => '0',
+    'list_default' => 1,
+    'description_field' => '0',
+    'widget' => array(
+      'file_extensions' => 'png gif jpg jpeg',
+      'file_path' => '',
+      'progress_indicator' => 'bar',
+      'max_filesize_per_file' => '',
+      'max_filesize_per_node' => '',
+      'max_resolution' => 0,
+      'min_resolution' => 0,
+      'alt' => '',
+      'custom_alt' => 0,
+      'title' => '',
+      'custom_title' => 0,
+      'title_type' => 'textfield',
+      'default_image' => NULL,
+      'use_default_image' => 0,
+      'label' => 'Logo',
+      'weight' => '35',
+      'description' => '',
+      'type' => 'imagefield_widget',
+      'module' => 'imagefield',
+    ),
+  );
+
+  // Exported field: field_location
+  $fields['organisation-field_location'] = array(
+    'field_name' => 'field_location',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'mobile' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'location',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'location_cck',
+    'active' => '1',
+    'location_settings' => array(
+      'form' => array(
+        'fields' => array(
+          'name' => array(
+            'collect' => '1',
+            'default' => '',
+            'weight' => '2',
+          ),
+          'street' => array(
+            'collect' => '1',
+            'default' => '',
+            'weight' => '4',
+          ),
+          'additional' => array(
+            'collect' => '1',
+            'default' => '',
+            'weight' => '6',
+          ),
+          'city' => array(
+            'collect' => '0',
+            'default' => '',
+            'weight' => '8',
+          ),
+          'province' => array(
+            'collect' => '0',
+            'default' => '',
+            'weight' => '10',
+          ),
+          'postal_code' => array(
+            'collect' => '0',
+            'default' => '',
+            'weight' => '12',
+          ),
+          'country' => array(
+            'collect' => '1',
+            'default' => 'de',
+            'weight' => '14',
+          ),
+          'locpick' => array(
+            'collect' => '1',
+            'weight' => '20',
+          ),
+          'phone' => array(
+            'collect' => '0',
+            'default' => '',
+            'weight' => '25',
+          ),
+          'fax' => array(
+            'collect' => '0',
+            'default' => '',
+            'weight' => '30',
+          ),
+        ),
+      ),
+      'display' => array(
+        'hide' => array(
+          'name' => 'name',
+          'fax' => 'fax',
+          'phone' => 'phone',
+          'country_name' => 'country_name',
+          'map_link' => 'map_link',
+          'coords' => 'coords',
+          'street' => 0,
+          'additional' => 0,
+          'city' => 0,
+          'province' => 0,
+          'postal_code' => 0,
+          'country' => 0,
+          'locpick' => 0,
+          'province_name' => 0,
+        ),
+      ),
+    ),
+    'gmap_macro' => '[gmap ]',
+    'gmap_marker' => 'drupal',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'name' => '',
+          'street' => '',
+          'additional' => '',
+          'country' => 'de',
+          'locpick' => array(
+            'user_latitude' => '',
+            'user_longitude' => '',
+          ),
+          'cck_preview_in_progress' => TRUE,
+          'location_settings' => array(
+            'form' => array(
+              'fields' => array(
+                'lid' => array(
+                  'default' => FALSE,
+                ),
+                'name' => array(
+                  'default' => '',
+                  'collect' => 1,
+                  'weight' => 2,
+                ),
+                'street' => array(
+                  'default' => '',
+                  'collect' => 1,
+                  'weight' => 4,
+                ),
+                'additional' => array(
+                  'default' => '',
+                  'collect' => 1,
+                  'weight' => 6,
+                ),
+                'city' => array(
+                  'default' => '',
+                  'collect' => 0,
+                  'weight' => 8,
+                ),
+                'province' => array(
+                  'default' => '',
+                  'collect' => 0,
+                  'weight' => 10,
+                ),
+                'postal_code' => array(
+                  'default' => '',
+                  'collect' => 0,
+                  'weight' => 12,
+                ),
+                'country' => array(
+                  'default' => 'de',
+                  'collect' => 1,
+                  'weight' => 14,
+                ),
+                'locpick' => array(
+                  'default' => FALSE,
+                  'collect' => 1,
+                  'weight' => 20,
+                  'nodiff' => TRUE,
+                ),
+                'latitude' => array(
+                  'default' => 0,
+                ),
+                'longitude' => array(
+                  'default' => 0,
+                ),
+                'source' => array(
+                  'default' => 0,
+                ),
+                'is_primary' => array(
+                  'default' => 0,
+                ),
+                'delete_location' => array(
+                  'default' => FALSE,
+                  'nodiff' => TRUE,
+                ),
+                'fax' => array(
+                  'default' => '',
+                  'collect' => 0,
+                  'weight' => 30,
+                ),
+                'phone' => array(
+                  'default' => '',
+                  'collect' => 0,
+                  'weight' => 25,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Ort',
+      'weight' => '38',
+      'description' => '',
+      'type' => 'location',
+      'module' => 'location_cck',
+    ),
+  );
+
+  // Exported field: field_org_project
+  $fields['organisation-field_org_project'] = array(
+    'field_name' => 'field_org_project',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '45',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'email_plain' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'email_html' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'nodereference',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'nodereference',
+    'active' => '1',
+    'referenceable_types' => array(
+      'project' => 'project',
+      'balancewiki' => 0,
+      'image' => 0,
+      'blog' => 0,
+      'definition' => 0,
+      'download' => 0,
+      'faq' => 0,
+      'focusgroup' => 0,
+      'forum' => 0,
+      'gallery_image' => 0,
+      'gallery' => 0,
+      'group' => 0,
+      'headerimage' => 0,
+      'link' => 0,
+      'simplenews' => 0,
+      'organisation' => 0,
+      'page' => 0,
+      'panel' => 0,
+      'pressemeldung' => 0,
+      'sparql' => 0,
+      'story' => 0,
+      'poll' => 0,
+      'event' => 0,
+      'wiki' => 0,
+      'conftoolgroup' => FALSE,
+      'dokuwiki' => FALSE,
+      'exhibit' => FALSE,
+      'expert' => FALSE,
+      'journal' => FALSE,
+      'biblio' => FALSE,
+      'video' => FALSE,
+      'workshop' => FALSE,
+    ),
+    'advanced_view' => '--',
+    'advanced_view_args' => '',
+    'widget' => array(
+      'autocomplete_match' => 'contains',
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'nid' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Mitgliedschaft in Projekten',
+      'weight' => '36',
+      'description' => '',
+      'type' => 'nodereference_select',
+      'module' => 'nodereference',
+    ),
+  );
+
+  // Exported field: field_org_project_vp
+  $fields['organisation-field_org_project_vp'] = array(
+    'field_name' => 'field_org_project_vp',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '46',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'email_plain' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'email_html' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'nodereference',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'nodereference',
+    'active' => '1',
+    'referenceable_types' => array(
+      'project' => 'project',
+      'balancewiki' => 0,
+      'image' => 0,
+      'blog' => 0,
+      'definition' => 0,
+      'download' => 0,
+      'faq' => 0,
+      'focusgroup' => 0,
+      'forum' => 0,
+      'gallery_image' => 0,
+      'gallery' => 0,
+      'group' => 0,
+      'headerimage' => 0,
+      'link' => 0,
+      'simplenews' => 0,
+      'organisation' => 0,
+      'page' => 0,
+      'panel' => 0,
+      'pressemeldung' => 0,
+      'sparql' => 0,
+      'story' => 0,
+      'poll' => 0,
+      'event' => 0,
+      'wiki' => 0,
+      'conftoolgroup' => FALSE,
+      'dokuwiki' => FALSE,
+      'exhibit' => FALSE,
+      'expert' => FALSE,
+      'journal' => FALSE,
+      'biblio' => FALSE,
+      'video' => FALSE,
+      'workshop' => FALSE,
+    ),
+    'advanced_view' => '--',
+    'advanced_view_args' => '',
+    'widget' => array(
+      'autocomplete_match' => 'contains',
+      'size' => '60',
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Beteiligung als Umsetungspartner',
+      'weight' => '37',
+      'description' => '',
+      'type' => 'nodereference_select',
+      'module' => 'nodereference',
     ),
   );
 
@@ -1834,6 +2335,7 @@ function dlr_groups_content_default_fields() {
   // Included for use with string extractors like potx.
   t('Ansprechpartner/-in');
   t('Beteiligte Institutionen');
+  t('Beteiligung als Umsetungspartner');
   t('Betreuung BALANCE');
   t('Betreuung DLR');
   t('Bild Betreuer DLR');
@@ -1844,8 +2346,11 @@ function dlr_groups_content_default_fields() {
   t('Hintergrundbild für die Startseite');
   t('Homepage');
   t('Kürzel');
+  t('Logo');
   t('Methoden');
   t('Mitglied in Fokusgruppe');
+  t('Mitgliedschaft in Projekten');
+  t('Ort');
   t('Projekte');
   t('Projektexposé');
   t('Projektkürzel');

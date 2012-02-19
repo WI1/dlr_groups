@@ -86,6 +86,17 @@ function dlr_groups_node_info() {
       'min_word_count' => '0',
       'help' => '',
     ),
+    'organisation' => array(
+      'name' => t('Organisation'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '0',
+      'body_label' => '',
+      'min_word_count' => '0',
+      'help' => '',
+    ),
     'project' => array(
       'name' => t('Projekt'),
       'module' => 'features',
