@@ -354,6 +354,275 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_focusgroup_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'Menüeinstellungen',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Versionsinformation',
+      'collapsed' => 0,
+      'hidden' => 0,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '12',
+      'has_required' => FALSE,
+      'title' => 'Einstellungen für Kommentare',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Veröffentlichungseinstellungen',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Informationen zum Autor',
+      'collapsed' => 0,
+      'hidden' => 0,
+    ),
+    'buttons' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'notifications' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Benachrichtigungen',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'book' => array(
+      'region' => 'right',
+      'weight' => '11',
+      'has_required' => FALSE,
+      'title' => 'Book outline',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'attachments' => array(
+      'region' => 'right',
+      'weight' => '10',
+      'has_required' => FALSE,
+      'title' => 'Dateianhänge',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'domain' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => TRUE,
+      'title' => 'Domain access options',
+      'collapsed' => 1,
+    ),
+    'delete' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'nodehierarchy' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Node Hierarchy',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'group_details' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => TRUE,
+      'title' => 'Details',
+    ),
+    'field_projects' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Projekte',
+      'hidden' => 1,
+    ),
+  );
+  $export['nodeformscols_field_placements_focusgroup_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_organisation_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '-5',
+      'has_required' => TRUE,
+      'title' => 'Title',
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Menüeinstellungen',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Versionsinformation',
+      'collapsed' => 0,
+      'hidden' => 0,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '11',
+      'has_required' => FALSE,
+      'title' => 'Einstellungen für Kommentare',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '10',
+      'has_required' => FALSE,
+      'title' => 'Veröffentlichungseinstellungen',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Informationen zum Autor',
+      'collapsed' => 0,
+      'hidden' => 0,
+    ),
+    'buttons' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'notifications' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Benachrichtigungen',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'book' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'Book outline',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'field_companylogo' => array(
+      'region' => 'main',
+      'weight' => '35',
+      'has_required' => FALSE,
+      'title' => 'Logo',
+      'hidden' => 0,
+    ),
+    'field_org_project' => array(
+      'region' => 'main',
+      'weight' => '36',
+      'has_required' => FALSE,
+      'title' => 'Mitgliedschaft in Projekten',
+      'hidden' => 0,
+    ),
+    'field_org_project_vp' => array(
+      'region' => 'main',
+      'weight' => '37',
+      'has_required' => FALSE,
+      'title' => 'Beteiligung als Umsetungspartner',
+      'hidden' => 0,
+    ),
+    'field_location' => array(
+      'region' => 'main',
+      'weight' => '38',
+      'has_required' => FALSE,
+      'title' => 'Ort',
+      'hidden' => 0,
+    ),
+    'domain' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => TRUE,
+      'title' => 'Domain access options',
+      'collapsed' => 1,
+    ),
+    'delete' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'attachments' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 1,
+    ),
+  );
+  $export['nodeformscols_field_placements_organisation_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'nodeformscols_field_placements_project_default';
   $strongarm->value = array(
     'title' => array(
