@@ -9,6 +9,13 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_focusgroup';
+  $strongarm->value = 0;
+  $export['comment_anonymous_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_organisation';
   $strongarm->value = 0;
   $export['comment_anonymous_organisation'] = $strongarm;
@@ -19,6 +26,13 @@ function dlr_groups_strongarm() {
   $strongarm->name = 'comment_anonymous_project';
   $strongarm->value = 0;
   $export['comment_anonymous_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_controls_focusgroup';
+  $strongarm->value = '3';
+  $export['comment_controls_focusgroup'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -37,6 +51,13 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_focusgroup';
+  $strongarm->value = '4';
+  $export['comment_default_mode_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_organisation';
   $strongarm->value = '4';
   $export['comment_default_mode_organisation'] = $strongarm;
@@ -47,6 +68,13 @@ function dlr_groups_strongarm() {
   $strongarm->name = 'comment_default_mode_project';
   $strongarm->value = '4';
   $export['comment_default_mode_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_order_focusgroup';
+  $strongarm->value = '1';
+  $export['comment_default_order_focusgroup'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -65,6 +93,13 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_focusgroup';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_organisation';
   $strongarm->value = '50';
   $export['comment_default_per_page_organisation'] = $strongarm;
@@ -75,6 +110,20 @@ function dlr_groups_strongarm() {
   $strongarm->name = 'comment_default_per_page_project';
   $strongarm->value = '50';
   $export['comment_default_per_page_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_focusgroup';
+  $strongarm->value = '2';
+  $export['comment_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_focusgroup';
+  $strongarm->value = '0';
+  $export['comment_form_location_focusgroup'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -100,6 +149,13 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_focusgroup';
+  $strongarm->value = '1';
+  $export['comment_preview_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_organisation';
   $strongarm->value = '1';
   $export['comment_preview_organisation'] = $strongarm;
@@ -117,6 +173,13 @@ function dlr_groups_strongarm() {
   $strongarm->name = 'comment_project';
   $strongarm->value = '2';
   $export['comment_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_focusgroup';
+  $strongarm->value = '1';
+  $export['comment_subject_field_focusgroup'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -251,23 +314,9 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'form_build_id_focusgroup';
-  $strongarm->value = 'form-e894aa8f0009021f39da749a3791d554';
-  $export['form_build_id_focusgroup'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'form_build_id_organisation';
-  $strongarm->value = 'form-60660463f98e89aa95d5870da3f540f3';
-  $export['form_build_id_organisation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'form_build_id_profile';
-  $strongarm->value = 'form-a6e9268898a3ed1162fbe1487a02d54a';
-  $export['form_build_id_profile'] = $strongarm;
+  $strongarm->name = 'language_content_type_focusgroup';
+  $strongarm->value = '0';
+  $export['language_content_type_focusgroup'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -288,17 +337,7 @@ function dlr_groups_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'nh_allowchild_focusgroup';
   $strongarm->value = array(
-    'project' => 'project',
-    'blog' => 0,
-    'book' => 0,
-    'event' => 0,
-    'focusgroup' => 0,
-    'group' => 0,
-    'simplenews' => 0,
-    'folder' => 0,
-    'profile' => 0,
-    'feed_ical_item' => 0,
-    'feed_ical' => 0,
+    0 => 'project',
   );
   $export['nh_allowchild_focusgroup'] = $strongarm;
 
@@ -468,13 +507,14 @@ function dlr_groups_strongarm() {
       'has_required' => FALSE,
       'title' => 'Node Hierarchy',
       'collapsed' => 1,
-      'hidden' => 1,
+      'hidden' => 0,
     ),
     'group_details' => array(
       'region' => 'main',
       'weight' => '2',
       'has_required' => TRUE,
       'title' => 'Details',
+      'collapsed' => 0,
     ),
     'field_projects' => array(
       'region' => 'main',
@@ -482,6 +522,47 @@ function dlr_groups_strongarm() {
       'has_required' => FALSE,
       'title' => 'Projekte',
       'hidden' => 1,
+    ),
+    'og_description' => array(
+      'region' => 'main',
+      'weight' => '-4',
+      'has_required' => TRUE,
+      'title' => 'Beschreibung',
+    ),
+    'og_selective' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Anträge auf Mitgliedschaft',
+    ),
+    'og_register' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Registrierungsformular',
+      'hidden' => 0,
+    ),
+    'og_directory' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Im Gruppenverzeichnis anzeigen',
+      'hidden' => 0,
+    ),
+    'themes' => array(
+      'region' => 'right',
+      'weight' => '13',
+      'has_required' => FALSE,
+      'title' => 'Theme configuration',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'og_private' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Nicht öffentliche Gruppe',
+      'hidden' => 0,
     ),
   );
   $export['nodeformscols_field_placements_focusgroup_default'] = $strongarm;
@@ -629,7 +710,7 @@ function dlr_groups_strongarm() {
       'region' => 'main',
       'weight' => '1',
       'has_required' => TRUE,
-      'title' => 'Projektname',
+      'title' => 'Vollständiger Projektname',
     ),
     'body_field' => array(
       'region' => 'main',
@@ -711,7 +792,7 @@ function dlr_groups_strongarm() {
     ),
     'attachments' => array(
       'region' => 'right',
-      'weight' => '12',
+      'weight' => '13',
       'has_required' => FALSE,
       'title' => 'Dateianhänge',
       'collapsed' => 1,
@@ -767,6 +848,47 @@ function dlr_groups_strongarm() {
       'has_required' => FALSE,
       'title' => 'Kontakt',
       'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'og_description' => array(
+      'region' => 'main',
+      'weight' => '-4',
+      'has_required' => TRUE,
+      'title' => 'Beschreibung',
+    ),
+    'og_selective' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Anträge auf Mitgliedschaft',
+    ),
+    'og_register' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Registrierungsformular',
+      'hidden' => 0,
+    ),
+    'og_directory' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Im Gruppenverzeichnis anzeigen',
+      'hidden' => 0,
+    ),
+    'themes' => array(
+      'region' => 'right',
+      'weight' => '12',
+      'has_required' => FALSE,
+      'title' => 'Theme configuration',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'og_private' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Nicht öffentliche Gruppe',
       'hidden' => 0,
     ),
   );
@@ -849,6 +971,13 @@ function dlr_groups_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'og_content_type_usage_focusgroup';
+  $strongarm->value = 'group';
+  $export['og_content_type_usage_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'og_content_type_usage_organisation';
   $strongarm->value = 'omitted';
   $export['og_content_type_usage_organisation'] = $strongarm;
@@ -857,8 +986,22 @@ function dlr_groups_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'og_content_type_usage_project';
-  $strongarm->value = 'omitted';
+  $strongarm->value = 'group';
   $export['og_content_type_usage_project'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'og_max_groups_focusgroup';
+  $strongarm->value = '';
+  $export['og_max_groups_focusgroup'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'og_max_groups_organisation';
+  $strongarm->value = '';
+  $export['og_max_groups_organisation'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
