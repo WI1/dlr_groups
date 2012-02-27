@@ -115,7 +115,7 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '43',
+    'weight' => '48',
     'fields' => array(
       '0' => 'field_projecthomepage',
       '1' => 'field_project_rssfeed',
@@ -173,7 +173,7 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '42',
+    'weight' => '45',
     'fields' => array(
       '0' => 'field_projektgoals',
       '1' => 'field_synopsis',
@@ -234,7 +234,7 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '41',
+    'weight' => '44',
     'fields' => array(
       '0' => 'field_projectfkz',
       '1' => 'field_projectlogo',

@@ -102,7 +102,7 @@ function dlr_groups_node_info() {
       'module' => 'features',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Vollständiger Projektname'),
+      'title_label' => t('Kurztitel'),
       'has_body' => '1',
       'body_label' => t('Kurzbeschreibung'),
       'min_word_count' => '0',
