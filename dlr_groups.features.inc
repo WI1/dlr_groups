@@ -18,6 +18,21 @@ function dlr_groups_ctools_plugin_api() {
  */
 function dlr_groups_imagecache_default_presets() {
   $items = array(
+    'projectlogo_2c_landscape' => array(
+      'presetname' => 'projectlogo_2c_landscape',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '140',
+            'height' => '87',
+            'upscale' => 1,
+          ),
+        ),
+      ),
+    ),
     'projectlogo_9c' => array(
       'presetname' => 'projectlogo_9c',
       'actions' => array(
