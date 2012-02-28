@@ -1280,7 +1280,7 @@ function dlr_groups_content_default_fields() {
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Mitglied in Fokusgruppe',
-      'weight' => '38',
+      'weight' => '39',
       'description' => '',
       'type' => 'nodereference_select',
       'module' => 'nodereference',
@@ -1728,7 +1728,7 @@ function dlr_groups_content_default_fields() {
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Projektmitglieder',
-      'weight' => '41',
+      'weight' => '38',
       'description' => '',
       'type' => 'realname_userreference_auto',
       'module' => 'realname_userreference',
@@ -1981,7 +1981,7 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Beteiligte Institutionen',
+      'label' => 'Projektmitglieder',
       'weight' => '51',
       'description' => '',
       'type' => 'nodereference_autocomplete',
@@ -2082,7 +2082,7 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Umsetzungspartner',
+      'label' => 'Value Partner',
       'weight' => '53',
       'description' => '',
       'type' => 'nodereference_autocomplete',
@@ -2283,7 +2283,6 @@ function dlr_groups_content_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Ansprechpartner/-in');
-  t('Beteiligte Institutionen');
   t('Beteiligung als Umsetungspartner');
   t('Betreuung BALANCE');
   t('Betreuung DLR');
@@ -2308,7 +2307,7 @@ function dlr_groups_content_default_fields() {
   t('RSSFeed');
   t('Steckbrief aus Konferenzband');
   t('Theorien / theoretische Grundlagen');
-  t('Umsetzungspartner');
+  t('Value Partner');
   t('Vorgehen');
 
   return $fields;

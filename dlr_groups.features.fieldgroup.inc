@@ -115,7 +115,7 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '48',
+    'weight' => '39',
     'fields' => array(
       '0' => 'field_projecthomepage',
       '1' => 'field_project_rssfeed',
@@ -173,16 +173,15 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '45',
+    'weight' => '38',
     'fields' => array(
       '0' => 'field_projektgoals',
       '1' => 'field_synopsis',
       '2' => 'field_steckbrief',
-      '3' => 'field_projectmembers',
-      '4' => 'field_researchquestions',
-      '5' => 'field_projecttheories',
-      '6' => 'field_projectapproach',
-      '7' => 'field_projecttechniques',
+      '3' => 'field_researchquestions',
+      '4' => 'field_projecttheories',
+      '5' => 'field_projectapproach',
+      '6' => 'field_projecttechniques',
     ),
   );
 
@@ -234,11 +233,12 @@ function dlr_groups_fieldgroup_default_groups() {
         'label' => 'above',
       ),
     ),
-    'weight' => '44',
+    'weight' => '37',
     'fields' => array(
       '0' => 'field_projectfkz',
       '1' => 'field_projectlogo',
-      '2' => 'field_project_fg_membership',
+      '2' => 'field_projectmembers',
+      '3' => 'field_project_fg_membership',
     ),
   );
 

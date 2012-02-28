@@ -283,22 +283,22 @@ function dlr_groups_strongarm() {
   $strongarm->name = 'content_extra_weights_project';
   $strongarm->value = array(
     'title' => '34',
-    'body_field' => '40',
-    'revision_information' => '42',
-    'author' => '41',
-    'options' => '43',
+    'body_field' => '36',
+    'revision_information' => '45',
+    'author' => '44',
+    'options' => '46',
     'comment_settings' => '49',
-    'menu' => '47',
+    'menu' => '48',
     'book' => '53',
-    'path' => '46',
+    'path' => '47',
     'attachments' => '50',
     'og_description' => '35',
-    'og_selective' => '37',
-    'og_register' => '39',
-    'og_directory' => '36',
+    'og_selective' => '41',
+    'og_register' => '43',
+    'og_directory' => '40',
     'domain' => '51',
     'nodehierarchy' => '52',
-    'og_private' => '38',
+    'og_private' => '42',
   );
   $export['content_extra_weights_project'] = $strongarm;
 
