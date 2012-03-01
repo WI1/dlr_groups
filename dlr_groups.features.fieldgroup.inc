@@ -118,10 +118,8 @@ function dlr_groups_fieldgroup_default_groups() {
     'weight' => '39',
     'fields' => array(
       '0' => 'field_projecthomepage',
-      '1' => 'field_project_rssfeed',
-      '2' => 'field_projectaccount',
-      '3' => 'field_ref_projectinstitutions',
-      '4' => 'field_ref_valuepartner',
+      '1' => 'field_projectaccount',
+      '2' => 'field_project_rssfeed',
     ),
   );
 
@@ -133,7 +131,7 @@ function dlr_groups_fieldgroup_default_groups() {
     'label' => 'Forschungsausrichtung',
     'settings' => array(
       'form' => array(
-        'style' => 'fieldset_collapsible',
+        'style' => 'fieldset_collapsed',
         'description' => '',
       ),
       'display' => array(
@@ -159,10 +157,6 @@ function dlr_groups_fieldgroup_default_groups() {
           'exclude' => 0,
         ),
         '3' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        'mobile' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
@@ -239,6 +233,8 @@ function dlr_groups_fieldgroup_default_groups() {
       '1' => 'field_projectlogo',
       '2' => 'field_projectmembers',
       '3' => 'field_project_fg_membership',
+      '4' => 'field_ref_projectinstitutions',
+      '5' => 'field_ref_valuepartner',
     ),
   );
 
