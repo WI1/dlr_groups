@@ -234,7 +234,8 @@ function dlr_groups_fieldgroup_default_groups() {
       '2' => 'field_projectmembers',
       '3' => 'field_project_fg_membership',
       '4' => 'field_ref_projectinstitutions',
-      '5' => 'field_ref_valuepartner',
+      '5' => 'field_umsetzungspartner',
+      '6' => 'field_ref_valuepartner',
     ),
   );
 

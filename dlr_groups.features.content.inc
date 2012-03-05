@@ -1472,6 +1472,65 @@ function dlr_groups_content_default_fields() {
     ),
   );
 
+  // Exported field: field_projectemail
+  $fields['project-field_projectemail'] = array(
+    'field_name' => 'field_projectemail',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => NULL,
+      'size' => NULL,
+      'label' => 'Email Kontakt',
+      'weight' => 0,
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
   // Exported field: field_projectfkz
   $fields['project-field_projectfkz'] = array(
     'field_name' => 'field_projectfkz',
@@ -1714,20 +1773,26 @@ function dlr_groups_content_default_fields() {
     'active' => '1',
     'referenceable_roles' => array(
       '2' => 2,
-      '8' => 8,
-      '7' => 7,
-      '9' => 9,
+      '3' => 0,
+      '6' => 0,
+      '4' => 0,
+      '5' => 0,
     ),
-    'referenceable_status' => 1,
+    'referenceable_status' => '1',
     'advanced_view' => '--',
     'advanced_view_args' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
       'reverse_link' => 0,
-      'default_value' => NULL,
+      'default_value' => array(
+        '0' => array(
+          'uid' => NULL,
+          '_error_element' => 'default_value_widget][field_projectmembers][0][uid][uid',
+        ),
+      ),
       'default_value_php' => NULL,
-      'label' => 'Projektmitglieder',
+      'label' => 'Personen im Projekt',
       'weight' => '38',
       'description' => '',
       'type' => 'realname_userreference_auto',
@@ -1981,7 +2046,7 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Projektmitglieder',
+      'label' => 'Institutionen im Projektkonsortium',
       'weight' => '40',
       'description' => '',
       'type' => 'nodereference_autocomplete',
@@ -2083,7 +2148,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Value Partner',
-      'weight' => '41',
+      'weight' => '42',
       'description' => '',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
@@ -2280,6 +2345,82 @@ function dlr_groups_content_default_fields() {
     ),
   );
 
+  // Exported field: field_umsetzungspartner
+  $fields['project-field_umsetzungspartner'] = array(
+    'field_name' => 'field_umsetzungspartner',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'nodereference',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'nodereference',
+    'active' => '1',
+    'referenceable_types' => array(
+      'organisation' => 'organisation',
+      'blog' => 0,
+      'book' => 0,
+      'event' => 0,
+      'focusgroup' => 0,
+      'group' => 0,
+      'profile' => 0,
+      'project' => 0,
+      'feed_ical_item' => 0,
+      'feed_ical' => 0,
+    ),
+    'advanced_view' => '--',
+    'advanced_view_args' => '',
+    'widget' => array(
+      'autocomplete_match' => 'contains',
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'nid' => NULL,
+          '_error_element' => 'default_value_widget][field_umsetzungspartner][0][nid][nid',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Umsetzungspartner',
+      'weight' => '41',
+      'description' => '',
+      'type' => 'nodereference_autocomplete',
+      'module' => 'nodereference',
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Ansprechpartner/-in');
@@ -2287,26 +2428,29 @@ function dlr_groups_content_default_fields() {
   t('Betreuung BALANCE');
   t('Betreuung DLR');
   t('Bild Betreuer DLR');
+  t('Email Kontakt');
   t('Farbcode');
   t('Fokusgruppensprecher');
   t('Forschungsfragen');
   t('Förderkennzeichen (FKZ)');
   t('Hintergrundbild für die Startseite');
   t('Homepage');
+  t('Institutionen im Projektkonsortium');
   t('Kürzel');
   t('Logo');
   t('Methoden');
   t('Mitglied in Fokusgruppe');
   t('Mitgliedschaft in Projekten');
   t('Ort');
+  t('Personen im Projekt');
   t('Projekte');
   t('Projektexposé');
   t('Projektlogo');
-  t('Projektmitglieder');
   t('Projektziele / Angestrebtes Ergebnis');
   t('RSSFeed');
   t('Steckbrief aus Konferenzband');
   t('Theorien / theoretische Grundlagen');
+  t('Umsetzungspartner');
   t('Value Partner');
   t('Vorgehen');
 
