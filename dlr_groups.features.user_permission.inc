@@ -80,7 +80,9 @@ function dlr_groups_user_default_permissions() {
   // Exported permission: override group default role
   $permissions['override group default role'] = array(
     'name' => 'override group default role',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   return $permissions;

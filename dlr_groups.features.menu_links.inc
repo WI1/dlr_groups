@@ -13,9 +13,7 @@ function dlr_groups_menu_default_menu_links() {
     'router_path' => 'og/projekte',
     'link_title' => 'Projekte',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'purl' => 'disabled',
     ),
     'module' => 'menu',
