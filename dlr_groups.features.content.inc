@@ -2036,7 +2036,7 @@ function dlr_groups_content_default_fields() {
       'feed_ical_item' => 0,
       'feed_ical' => 0,
     ),
-    'advanced_view' => 'groups_noderef_preview_org',
+    'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
@@ -2121,7 +2121,7 @@ function dlr_groups_content_default_fields() {
       'feed_ical_item' => 0,
       'feed_ical' => 0,
     ),
-    'advanced_view' => 'groups_noderef_preview_org',
+    'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
@@ -2388,7 +2388,7 @@ function dlr_groups_content_default_fields() {
       'feed_ical_item' => 0,
       'feed_ical' => 0,
     ),
-    'advanced_view' => 'groups_noderef_preview_org',
+    'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
