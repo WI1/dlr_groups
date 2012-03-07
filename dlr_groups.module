@@ -4,6 +4,9 @@ include_once('dlr_groups.features.inc');
 
 /**
  * Implementation of hook_context_links_alter().
+ * 
+ * Have only one context link button appear for dlr group nodes: Edit the node.
+ * 
  */
 
 function dlr_groups_context_links_alter(&$links) {
@@ -17,8 +20,14 @@ function dlr_groups_context_links_alter(&$links) {
   }
 }
 
+/**
+ * Implementation of hook_menu_alter().
+ * 
+ * Hide certain menu items that appear as tabs.
+ * 
+ */
 function dlr_groups_menu_alter(&$items){
-  $items['node/%node/buildmodes'] = null;
-  $items['node/%node/features'] = null;
-  $items['node/%node/by_subject'] = null;
+  $items['node/%/buildmodes'] = null;
+  $items['node/%/features'] = null;
+  $items['node/%/by_subject'] = null;
 }
