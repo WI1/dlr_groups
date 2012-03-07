@@ -17,8 +17,8 @@ function dlr_groups_context_links_alter(&$links) {
   }
 }
 
-
-
-
-
-
+function dlr_groups_menu_alter(&$items){
+  $items['node/%node/buildmodes'] = null;
+  $items['node/%node/features'] = null;
+  $items['node/%node/by_subject'] = null;
+}
