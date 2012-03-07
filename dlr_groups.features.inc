@@ -109,7 +109,7 @@ function dlr_groups_node_info() {
       'module' => 'features',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'has_body' => '0',
       'body_label' => '',
       'min_word_count' => '0',

@@ -1,3 +1,21 @@
 <?php
 
 include_once('dlr_groups.features.inc');
+
+/**
+ * Implementation of hook_context_links_alter().
+ */
+
+function dlr_groups_context_links_alter(&$links) {
+  if (context_get('context', 'dlr_groups_context_links')) {
+    $links = array();
+    $active_space = spaces_get_space();
+    $item = menu_get_item('node/'.$active_space->id.'/edit');
+    if ($item['access']) {
+      $links['admin_groups'] = array('title' => t('Edit @type', array('@type' => $item['title'])), 'href' => $item['href']);
+    }
+  }
+}
+
+
+
