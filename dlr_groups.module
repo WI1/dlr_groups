@@ -12,8 +12,9 @@ include_once('dlr_groups.features.inc');
 function dlr_groups_context_links_alter(&$links) {
   if (context_get('context', 'dlr_groups_context_links')) {
     $links = array();
+    /* @var $active_space spaces_og class */
     $active_space = spaces_get_space();
-    $item = menu_get_item('node/'.$active_space->id.'/edit');
+    $item = menu_get_item('node/'.spaces_get_space()->id.'/edit');
     if ($item['access']) {
       $links['admin_groups'] = array('title' => t('Edit @type', array('@type' => $active_space->group->type)), 'href' => $item['href']);
     }
@@ -27,7 +28,7 @@ function dlr_groups_context_links_alter(&$links) {
  * 
  */
 function dlr_groups_menu_alter(&$items){
-  $items['node/%/buildmodes'] = null;
-  $items['node/%/features'] = null;
-  $items['node/%/by_subject'] = null;
+  $items['node/%/buildmodes'][type] = MENU_CALLBACK;
+  $items['node/%/features'][type] = MENU_CALLBACK;
+  
 }
