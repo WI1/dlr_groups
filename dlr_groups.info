@@ -1,5 +1,5 @@
 name = "dlr groups"
-description = "dlr groups"
+description = "dlr groups feature for openatrium"
 core = "6.x"
 package = "Features"
 version = "6.x-1.0"
