@@ -5,18 +5,21 @@ include_once('dlr_groups.features.inc');
 /**
  * Implementation of hook_context_links_alter().
  * 
- * Have only one context link button appear for dlr group nodes: Edit the node.
+ * Have only one context link button appear for dlr group nodes when the info tab is selected: Edit the node.
  * 
  */
 
 function dlr_groups_context_links_alter(&$links) {
+  $path_query = $_GET['q'];
   if (context_get('context', 'dlr_groups_context_links')) {
     $links = array();
-    /* @var $active_space spaces_og class */
-    $active_space = spaces_get_space();
-    $item = menu_get_item('node/'.spaces_get_space()->id.'/edit');
-    if ($item['access']) {
-      $links['admin_groups'] = array('title' => t('Edit @type', array('@type' => $active_space->group->type)), 'href' => $item['href']);
+    if($path_query === "info"){
+      /* @var $active_space spaces_og class */
+      $active_space = spaces_get_space();
+      $item = menu_get_item('node/'.spaces_get_space()->id.'/edit');
+      if ($item['access']) {
+        $links['admin_groups'] = array('title' => t('Edit @type', array('@type' => $active_space->group->type)), 'href' => $item['href']);
+      }
     }
   }
 }
