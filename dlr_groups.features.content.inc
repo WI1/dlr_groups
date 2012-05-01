@@ -62,7 +62,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '60',
@@ -126,7 +125,6 @@ function dlr_groups_content_default_fields() {
     'referenceable_status' => '1',
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -191,7 +189,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => '5',
       'size' => '60',
@@ -255,7 +252,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => '',
@@ -324,7 +320,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '4',
@@ -404,7 +399,6 @@ function dlr_groups_content_default_fields() {
     'referenceable_status' => '',
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -462,7 +456,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '',
     'list_default' => '',
     'description_field' => '',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => NULL,
       'file_path' => NULL,
@@ -530,7 +523,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => 'logos',
@@ -691,7 +683,6 @@ function dlr_groups_content_default_fields() {
       'vname' => 'fg_projects|default',
       'vargs' => '[term]',
     ),
-    'reference_preview' => '',
     'widget' => array(
       'force_default' => 0,
       'label' => 'Projekte',
@@ -762,7 +753,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => '',
@@ -915,7 +905,6 @@ function dlr_groups_content_default_fields() {
     ),
     'gmap_macro' => '[gmap ]',
     'gmap_marker' => 'drupal',
-    'reference_preview' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
@@ -1104,7 +1093,6 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -1211,7 +1199,6 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -1305,7 +1292,6 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => 60,
@@ -1385,7 +1371,6 @@ function dlr_groups_content_default_fields() {
     'title_value' => '',
     'enable_tokens' => 0,
     'validate_url' => 0,
-    'reference_preview' => '',
     'widget' => array(
       'default_value' => NULL,
       'default_value_php' => NULL,
@@ -1435,7 +1420,6 @@ function dlr_groups_content_default_fields() {
     'referenceable_status' => '1',
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -1488,7 +1472,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => '10',
       'size' => 60,
@@ -1555,7 +1538,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => NULL,
       'size' => NULL,
@@ -1612,7 +1594,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '20',
@@ -1673,7 +1654,6 @@ function dlr_groups_content_default_fields() {
     'title_value' => '',
     'enable_tokens' => 0,
     'validate_url' => '',
-    'reference_preview' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
@@ -1734,7 +1714,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => 'logos',
@@ -1820,7 +1799,6 @@ function dlr_groups_content_default_fields() {
     'referenceable_status' => '1',
     'advanced_view' => '--',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -1873,7 +1851,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => '10',
       'size' => 60,
@@ -1925,7 +1902,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => '5',
       'size' => 60,
@@ -1977,7 +1953,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => '10',
       'size' => 60,
@@ -2063,7 +2038,6 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -2149,7 +2123,6 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -2213,7 +2186,6 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
-    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '60',
@@ -2287,7 +2259,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'txt doc doc docx pdf',
       'file_path' => '',
@@ -2346,7 +2317,6 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
-    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'pdf',
       'file_path' => 'synopses',
@@ -2420,7 +2390,6 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
-    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',

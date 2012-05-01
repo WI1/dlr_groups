@@ -13,7 +13,8 @@ function dlr_groups_context_links_alter(&$links) {
   $path_query = $_GET['q'];
   if (context_get('context', 'dlr_groups_context_links')) {
     $links = array();
-    if($path_query === "info"){
+    // The context_links button appaear for info page and pages with node in the url but not node edit
+    if($path_query === "info" || (strpos($path_query, "node") !== FALSE && strpos($path_query, "edit") === FALSE)) {
       /* @var $active_space spaces_og class */
       $active_space = spaces_get_space();
       $item = menu_get_item('node/'.spaces_get_space()->id.'/edit');
