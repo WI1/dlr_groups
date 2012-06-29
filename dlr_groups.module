@@ -20,7 +20,7 @@ function dlr_groups_context_links_alter(&$links) {
       $item = menu_get_item('node/' . spaces_get_space()->id . '/edit');
       $node_type = node_get_types('name', node_load(spaces_get_space()->id));
       if ($item['access']) {
-        $links['admin_groups'] = array('title' => t('Edit @name', array('@name' => $node_type)), 'href' => $item['href']);
+        $links['admin_groups'] = array('title' => t('@name bearbeiten', array('@name' => $node_type), 'de'), 'href' => $item['href']);
       }
     }
   }
