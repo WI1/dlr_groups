@@ -14,3 +14,20 @@ function dlr_groups_menu_alter(&$items){
   $items['node/%node/buildmodes']['type'] = MENU_CALLBACK;
   $items['node/%node/features']['type'] = MENU_CALLBACK;
 }
+
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function dlr_groups_form_alter(&$form, $form_state, $form_id) {
+ // $form['#action']  = explode('search', $form['#action']); 
+  
+  switch ($form_id) {
+    // This is our form ID.
+    case 'project_node_form':
+      // Increased the project og description max size
+      $form['og_description']['#maxlength'] = 500;
+      
+      break;
+  }
+}
