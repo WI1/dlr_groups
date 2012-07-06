@@ -27,7 +27,10 @@ function dlr_groups_form_alter(&$form, $form_state, $form_id) {
     case 'project_node_form':
       // Increased the project og description max size
       $form['og_description']['#maxlength'] = 500;
-      
+      break;
+    case 'focusgroup_node_form':
+      // Increased the project og description max size
+      unset($form['og_description']);
       break;
   }
 }
