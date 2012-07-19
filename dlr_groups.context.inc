@@ -19,7 +19,18 @@ function dlr_groups_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => 2,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
