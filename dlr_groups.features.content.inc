@@ -11,19 +11,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_color_hex',
     'type_name' => 'focusgroup',
     'display_settings' => array(
+      'weight' => '9',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -62,13 +63,14 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '60',
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Farbcode',
-      'weight' => '14',
+      'weight' => '9',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -80,17 +82,17 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_contactbalance',
     'type_name' => 'focusgroup',
     'display_settings' => array(
-      'weight' => '1',
-      'parent' => '',
+      'weight' => '4',
+      'parent' => 'group_mpsupport',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'custom_formatters_user_reference_address',
         'exclude' => 0,
       ),
       '4' => array(
@@ -125,6 +127,7 @@ function dlr_groups_content_default_fields() {
     'referenceable_status' => '1',
     'advanced_view' => '--',
     'advanced_view_args' => '',
+    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -136,8 +139,8 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Betreuung BALANCE',
-      'weight' => '16',
+      'label' => 'Betreuer beim Metaprojekt „DemoScreen“',
+      'weight' => '4',
       'description' => '',
       'type' => 'userreference_autocomplete',
       'module' => 'userreference',
@@ -149,8 +152,8 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_contactdlr',
     'type_name' => 'focusgroup',
     'display_settings' => array(
-      'weight' => 0,
-      'parent' => '',
+      'weight' => '5',
+      'parent' => 'group_supportdlr',
       'label' => array(
         'format' => 'above',
       ),
@@ -189,6 +192,7 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => '5',
       'size' => '60',
@@ -200,8 +204,85 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Betreuung DLR',
-      'weight' => '17',
+      'label' => 'Name',
+      'weight' => '5',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_contactdlrphone
+  $fields['focusgroup-field_contactdlrphone'] = array(
+    'field_name' => 'field_contactdlrphone',
+    'type_name' => 'focusgroup',
+    'display_settings' => array(
+      'weight' => '6',
+      'parent' => 'group_supportdlr',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_contactdlrphone][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Telefon',
+      'weight' => '6',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -213,8 +294,8 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_contactdlrpicture',
     'type_name' => 'focusgroup',
     'display_settings' => array(
-      'weight' => '-1',
-      'parent' => '',
+      'weight' => '8',
+      'parent' => 'group_supportdlr',
       'label' => array(
         'format' => 'hidden',
       ),
@@ -252,6 +333,7 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => '',
@@ -267,11 +349,82 @@ function dlr_groups_content_default_fields() {
       'title_type' => 'textfield',
       'default_image' => NULL,
       'use_default_image' => 0,
-      'label' => 'Bild Betreuer DLR',
-      'weight' => '18',
+      'label' => 'Bild',
+      'weight' => '8',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
+    ),
+  );
+
+  // Exported field: field_emailcontactdlr
+  $fields['focusgroup-field_emailcontactdlr'] = array(
+    'field_name' => 'field_emailcontactdlr',
+    'type_name' => 'focusgroup',
+    'display_settings' => array(
+      'weight' => '7',
+      'parent' => 'group_supportdlr',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'email',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'email',
+    'active' => '1',
+    'reference_preview' => '',
+    'widget' => array(
+      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'email' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Email',
+      'weight' => '7',
+      'description' => '',
+      'type' => 'email_textfield',
+      'module' => 'email',
     ),
   );
 
@@ -280,7 +433,7 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_fgident',
     'type_name' => 'focusgroup',
     'display_settings' => array(
-      'weight' => '-4',
+      'weight' => '2',
       'parent' => '',
       'label' => array(
         'format' => 'above',
@@ -320,6 +473,7 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '4',
@@ -331,7 +485,232 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Kürzel',
-      'weight' => '13',
+      'weight' => '2',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_fgspeakeremail
+  $fields['focusgroup-field_fgspeakeremail'] = array(
+    'field_name' => 'field_fgspeakeremail',
+    'type_name' => 'focusgroup',
+    'display_settings' => array(
+      'weight' => '31',
+      'parent' => 'group_focusgroupspeaker',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'email',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'email',
+    'active' => '1',
+    'reference_preview' => '',
+    'widget' => array(
+      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'email' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Email',
+      'weight' => '31',
+      'description' => '',
+      'type' => 'email_textfield',
+      'module' => 'email',
+    ),
+  );
+
+  // Exported field: field_fgspeakernoaccount
+  $fields['focusgroup-field_fgspeakernoaccount'] = array(
+    'field_name' => 'field_fgspeakernoaccount',
+    'type_name' => 'focusgroup',
+    'display_settings' => array(
+      'weight' => '30',
+      'parent' => 'group_focusgroupspeaker',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_fgspeakernoaccount][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Fokusgruppensprecher (ohne Benutzeraccount)',
+      'weight' => '30',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_fgspeakerphone
+  $fields['focusgroup-field_fgspeakerphone'] = array(
+    'field_name' => 'field_fgspeakerphone',
+    'type_name' => 'focusgroup',
+    'display_settings' => array(
+      'weight' => '32',
+      'parent' => 'group_focusgroupspeaker',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_fgspeakerphone][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Telefon',
+      'weight' => '32',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -343,19 +722,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_focusgroup_speaker',
     'type_name' => 'focusgroup',
     'display_settings' => array(
+      'weight' => '29',
+      'parent' => 'group_focusgroupspeaker',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -399,6 +779,7 @@ function dlr_groups_content_default_fields() {
     'referenceable_status' => '',
     'advanced_view' => '--',
     'advanced_view_args' => '',
+    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -406,7 +787,7 @@ function dlr_groups_content_default_fields() {
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'Fokusgruppensprecher',
-      'weight' => '15',
+      'weight' => '29',
       'description' => '',
       'type' => 'userreference_autocomplete',
       'module' => 'userreference',
@@ -418,17 +799,18 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_frontpageimage',
     'type_name' => 'focusgroup',
     'display_settings' => array(
+      'weight' => '8',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'image_plain',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'image_plain',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'image_plain',
@@ -456,6 +838,7 @@ function dlr_groups_content_default_fields() {
     'list_field' => '',
     'list_default' => '',
     'description_field' => '',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => NULL,
       'file_path' => NULL,
@@ -472,7 +855,7 @@ function dlr_groups_content_default_fields() {
       'default_image' => NULL,
       'use_default_image' => NULL,
       'label' => 'Hintergrundbild für die Startseite',
-      'weight' => '20',
+      'weight' => '8',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -484,18 +867,18 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projectlogo',
     'type_name' => 'focusgroup',
     'display_settings' => array(
-      'weight' => '42',
-      'parent' => 'group_projectinfo',
+      'weight' => '1',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
       ),
       'teaser' => array(
         'format' => 'projectlogo_9c_default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'projectlogo_9c_default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'image_plain',
@@ -523,6 +906,7 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => 'logos',
@@ -537,20 +921,20 @@ function dlr_groups_content_default_fields() {
       'custom_title' => 0,
       'title_type' => 'textfield',
       'default_image' => array(
-        'filename' => 'Balance-Logo_30.png',
-        'filepath' => 'sites/balanceonline.org/files/imagefield_default_images/Balance-Logo_30.png',
+        'filename' => 'logo_light.png',
+        'filepath' => 'sites/dlr.wi1projects.com/files/imagefield_default_images/logo_light.png',
         'filemime' => 'image/png',
         'source' => 'default_image_upload',
-        'destination' => 'sites/balanceonline.org/files/imagefield_default_images/Balance-Logo_30.png',
-        'filesize' => '8411',
-        'uid' => '8',
+        'destination' => 'sites/dlr.wi1projects.com/files/imagefield_default_images/logo_light.png',
+        'filesize' => 14445,
+        'uid' => '1',
         'status' => 1,
-        'timestamp' => 1264440203,
-        'fid' => '150',
+        'timestamp' => 1340008834,
+        'fid' => '46',
       ),
       'use_default_image' => 1,
       'label' => 'Projektlogo',
-      'weight' => '19',
+      'weight' => '1',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -562,9 +946,10 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projects',
     'type_name' => 'focusgroup',
     'display_settings' => array(
+      'weight' => '7',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -683,13 +1068,286 @@ function dlr_groups_content_default_fields() {
       'vname' => 'fg_projects|default',
       'vargs' => '[term]',
     ),
+    'reference_preview' => '',
     'widget' => array(
       'force_default' => 0,
       'label' => 'Projekte',
-      'weight' => 0,
+      'weight' => '7',
       'description' => '',
       'type' => 'viewfield_select',
       'module' => 'viewfield',
+    ),
+  );
+
+  // Exported field: field_backref_2bd4ca9f584265ff02
+  $fields['organisation-field_backref_2bd4ca9f584265ff02'] = array(
+    'field_name' => 'field_backref_2bd4ca9f584265ff02',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '6',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'noderelationships_backref',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'noderelationships',
+    'active' => '1',
+    'referrer_type' => 'project',
+    'referrer_field' => 'field_ref_valuepartner',
+    'reference_preview' => '',
+    'widget' => array(
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Value Partner in folgenden Projekten',
+      'weight' => '6',
+      'description' => '',
+      'type' => 'noderelationships_backref',
+      'module' => 'noderelationships',
+    ),
+  );
+
+  // Exported field: field_backref_9fcdb0e157cbfdbc7e
+  $fields['organisation-field_backref_9fcdb0e157cbfdbc7e'] = array(
+    'field_name' => 'field_backref_9fcdb0e157cbfdbc7e',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '5',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'noderelationships_backref',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'noderelationships',
+    'active' => '1',
+    'referrer_type' => 'project',
+    'referrer_field' => 'field_umsetzungspartner',
+    'reference_preview' => '',
+    'widget' => array(
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Umsetzungspartner in folgenden Projekten',
+      'weight' => '5',
+      'description' => '',
+      'type' => 'noderelationships_backref',
+      'module' => 'noderelationships',
+    ),
+  );
+
+  // Exported field: field_backref_b6fc31c6554f41e2d5
+  $fields['organisation-field_backref_b6fc31c6554f41e2d5'] = array(
+    'field_name' => 'field_backref_b6fc31c6554f41e2d5',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '8',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'noderelationships_backref',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'noderelationships',
+    'active' => '1',
+    'referrer_type' => 'profile',
+    'referrer_field' => 'field_profile_organization',
+    'reference_preview' => '',
+    'widget' => array(
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Mitglieder dieser Organisation',
+      'weight' => '8',
+      'description' => '',
+      'type' => 'noderelationships_backref',
+      'module' => 'noderelationships',
+    ),
+  );
+
+  // Exported field: field_backref_e81e2d94d76f6572d4
+  $fields['organisation-field_backref_e81e2d94d76f6572d4'] = array(
+    'field_name' => 'field_backref_e81e2d94d76f6572d4',
+    'type_name' => 'organisation',
+    'display_settings' => array(
+      'weight' => '7',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'noderelationships_backref',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'noderelationships',
+    'active' => '1',
+    'referrer_type' => 'project',
+    'referrer_field' => 'field_ref_projectinstitutions',
+    'reference_preview' => '',
+    'widget' => array(
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Verbundprojektpartner in folgenden Projekten',
+      'weight' => '7',
+      'description' => '',
+      'type' => 'noderelationships_backref',
+      'module' => 'noderelationships',
     ),
   );
 
@@ -698,21 +1356,25 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_companylogo',
     'type_name' => 'organisation',
     'display_settings' => array(
-      'weight' => '35',
+      'weight' => '2',
       'parent' => '',
-      'teaser_noderef' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
       'label' => array(
         'format' => 'above',
       ),
       'teaser' => array(
-        'format' => 'hidden',
+        'format' => 'projectlogo-m_linked',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'hidden',
+        'format' => 'projectlogo_2c_landscape_default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'projectlogo-m_default',
+        'exclude' => 0,
+      ),
+      'teaser_noderef' => array(
+        'format' => 'default',
         'exclude' => 0,
       ),
       '5' => array(
@@ -753,23 +1415,40 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => '',
       'progress_indicator' => 'bar',
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
-      'max_resolution' => 0,
-      'min_resolution' => 0,
+      'max_resolution' => '0',
+      'min_resolution' => '0',
       'alt' => '',
       'custom_alt' => 0,
       'title' => '',
       'custom_title' => 0,
       'title_type' => 'textfield',
-      'default_image' => NULL,
-      'use_default_image' => 0,
+      'default_image' => array(
+        'filename' => 'logo_light_0.png',
+        'filepath' => 'sites/dlr.wi1projects.com/files/imagefield_default_images/logo_light_0_1.png',
+        'filemime' => 'image/png',
+        'source' => 'default_image_upload',
+        'destination' => 'sites/dlr.wi1projects.com/files/imagefield_default_images/logo_light_0_1.png',
+        'filesize' => 8877,
+        'uid' => '8',
+        'status' => 1,
+        'timestamp' => 1342159194,
+        'fid' => '111',
+      ),
+      'use_default_image' => 1,
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
       'label' => 'Logo',
-      'weight' => '35',
+      'weight' => '2',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -781,25 +1460,24 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_location',
     'type_name' => 'organisation',
     'display_settings' => array(
-      'weight' => '38',
+      'weight' => '3',
       'parent' => '',
-      'teaser_noderef' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'all',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -815,10 +1493,6 @@ function dlr_groups_content_default_fields() {
         'format' => 'default',
         'exclude' => 0,
       ),
-      'mobile' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
       'token' => array(
         'format' => 'default',
         'exclude' => 0,
@@ -826,7 +1500,7 @@ function dlr_groups_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'location',
-    'required' => '0',
+    'required' => '1',
     'multiple' => '0',
     'module' => 'location_cck',
     'active' => '1',
@@ -849,7 +1523,7 @@ function dlr_groups_content_default_fields() {
             'weight' => '6',
           ),
           'city' => array(
-            'collect' => '0',
+            'collect' => '2',
             'default' => '',
             'weight' => '8',
           ),
@@ -859,7 +1533,7 @@ function dlr_groups_content_default_fields() {
             'weight' => '10',
           ),
           'postal_code' => array(
-            'collect' => '0',
+            'collect' => '1',
             'default' => '',
             'weight' => '12',
           ),
@@ -869,42 +1543,31 @@ function dlr_groups_content_default_fields() {
             'weight' => '14',
           ),
           'locpick' => array(
-            'collect' => '1',
+            'collect' => '0',
             'weight' => '20',
-          ),
-          'phone' => array(
-            'collect' => '0',
-            'default' => '',
-            'weight' => '25',
-          ),
-          'fax' => array(
-            'collect' => '0',
-            'default' => '',
-            'weight' => '30',
           ),
         ),
       ),
       'display' => array(
         'hide' => array(
-          'name' => 'name',
-          'fax' => 'fax',
-          'phone' => 'phone',
+          'province' => 'province',
+          'locpick' => 'locpick',
+          'province_name' => 'province_name',
           'country_name' => 'country_name',
           'map_link' => 'map_link',
           'coords' => 'coords',
+          'name' => 0,
           'street' => 0,
           'additional' => 0,
           'city' => 0,
-          'province' => 0,
           'postal_code' => 0,
           'country' => 0,
-          'locpick' => 0,
-          'province_name' => 0,
         ),
       ),
     ),
     'gmap_macro' => '[gmap ]',
-    'gmap_marker' => 'drupal',
+    'gmap_marker' => 'purple',
+    'reference_preview' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
@@ -980,41 +1643,27 @@ function dlr_groups_content_default_fields() {
                   'default' => FALSE,
                   'nodiff' => TRUE,
                 ),
-                'fax' => array(
-                  'default' => '',
-                  'collect' => 0,
-                  'weight' => 30,
-                ),
-                'phone' => array(
-                  'default' => '',
-                  'collect' => 0,
-                  'weight' => 25,
-                ),
               ),
             ),
           ),
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Ort',
-      'weight' => '38',
-      'description' => '',
+      'label' => 'Adresse',
+      'weight' => '3',
+      'description' => 'Fügen Sie hier die Adressdaten Ihrer Organisation ein. Damit Ihre Organisation auf der Forschungslandkarte erscheint muss mindestens die Stadt angegeben sein.',
       'type' => 'location',
       'module' => 'location_cck',
     ),
   );
 
-  // Exported field: field_org_project
-  $fields['organisation-field_org_project'] = array(
-    'field_name' => 'field_org_project',
+  // Exported field: field_organisation_url
+  $fields['organisation-field_organisation_url'] = array(
+    'field_name' => 'field_organisation_url',
     'type_name' => 'organisation',
     'display_settings' => array(
-      'weight' => '36',
+      'weight' => '4',
       'parent' => '',
-      'teaser_noderef' => array(
-        'format' => 'default',
-        'exclude' => 1,
-      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -1023,6 +1672,14 @@ function dlr_groups_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1038,89 +1695,60 @@ function dlr_groups_content_default_fields() {
         'format' => 'default',
         'exclude' => 0,
       ),
-      'email_plain' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'email_html' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
       'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
     ),
     'widget_active' => '1',
-    'type' => 'nodereference',
+    'type' => 'link',
     'required' => '0',
-    'multiple' => '1',
-    'module' => 'nodereference',
+    'multiple' => '0',
+    'module' => 'link',
     'active' => '1',
-    'referenceable_types' => array(
-      'project' => 'project',
-      'balancewiki' => 0,
-      'image' => 0,
-      'blog' => 0,
-      'definition' => 0,
-      'download' => 0,
-      'faq' => 0,
-      'focusgroup' => 0,
-      'forum' => 0,
-      'gallery_image' => 0,
-      'gallery' => 0,
-      'group' => 0,
-      'headerimage' => 0,
-      'link' => 0,
-      'simplenews' => 0,
-      'organisation' => 0,
-      'page' => 0,
-      'panel' => 0,
-      'pressemeldung' => 0,
-      'sparql' => 0,
-      'story' => 0,
-      'poll' => 0,
-      'event' => 0,
-      'wiki' => 0,
-      'conftoolgroup' => FALSE,
-      'dokuwiki' => FALSE,
-      'exhibit' => FALSE,
-      'expert' => FALSE,
-      'journal' => FALSE,
-      'biblio' => FALSE,
-      'video' => FALSE,
-      'workshop' => FALSE,
+    'attributes' => array(
+      'target' => 'default',
+      'rel' => '',
+      'class' => '',
+      'title' => '',
     ),
-    'advanced_view' => '--',
-    'advanced_view_args' => '',
+    'display' => array(
+      'url_cutoff' => '80',
+    ),
+    'url' => 0,
+    'title' => 'optional',
+    'title_value' => '',
+    'enable_tokens' => 0,
+    'validate_url' => 1,
+    'reference_preview' => '',
     'widget' => array(
-      'autocomplete_match' => 'contains',
-      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
       'default_value' => array(
         '0' => array(
-          'nid' => '',
+          'title' => '',
+          'url' => '',
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Mitgliedschaft in Projekten',
-      'weight' => '36',
+      'label' => 'Webseite der Organisation',
+      'weight' => '4',
       'description' => '',
-      'type' => 'nodereference_select',
-      'module' => 'nodereference',
+      'type' => 'link',
+      'module' => 'link',
     ),
   );
 
-  // Exported field: field_org_project_vp
-  $fields['organisation-field_org_project_vp'] = array(
-    'field_name' => 'field_org_project_vp',
-    'type_name' => 'organisation',
+  // Exported field: field_ansprechpartner_nonref
+  $fields['project-field_ansprechpartner_nonref'] = array(
+    'field_name' => 'field_ansprechpartner_nonref',
+    'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '37',
-      'parent' => '',
-      'teaser_noderef' => array(
-        'format' => 'default',
-        'exclude' => 1,
-      ),
+      'weight' => '26',
+      'parent' => 'group_projectcontact',
       'label' => array(
         'format' => 'above',
       ),
@@ -1129,6 +1757,14 @@ function dlr_groups_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1144,11 +1780,80 @@ function dlr_groups_content_default_fields() {
         'format' => 'default',
         'exclude' => 0,
       ),
-      'email_plain' => array(
+      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
-      'email_html' => array(
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_ansprechpartner_nonref][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Ansprechpartner/in (ohne Benutzerkonto)',
+      'weight' => '26',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_berufsgruppen
+  $fields['project-field_berufsgruppen'] = array(
+    'field_name' => 'field_berufsgruppen',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'weight' => '40',
+      'parent' => 'group_projectinfo',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'link',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'custom_formatters_content_taxonmy_field_multiple',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1158,57 +1863,177 @@ function dlr_groups_content_default_fields() {
       ),
     ),
     'widget_active' => '1',
-    'type' => 'nodereference',
+    'type' => 'content_taxonomy',
     'required' => '0',
     'multiple' => '1',
-    'module' => 'nodereference',
+    'module' => 'content_taxonomy',
     'active' => '1',
-    'referenceable_types' => array(
-      'project' => 'project',
-      'balancewiki' => 0,
-      'image' => 0,
-      'blog' => 0,
-      'definition' => 0,
-      'download' => 0,
-      'faq' => 0,
-      'focusgroup' => 0,
-      'forum' => 0,
-      'gallery_image' => 0,
-      'gallery' => 0,
-      'group' => 0,
-      'headerimage' => 0,
-      'link' => 0,
-      'simplenews' => 0,
-      'organisation' => 0,
-      'page' => 0,
-      'panel' => 0,
-      'pressemeldung' => 0,
-      'sparql' => 0,
-      'story' => 0,
-      'poll' => 0,
-      'event' => 0,
-      'wiki' => 0,
-      'conftoolgroup' => FALSE,
-      'dokuwiki' => FALSE,
-      'exhibit' => FALSE,
-      'expert' => FALSE,
-      'journal' => FALSE,
-      'biblio' => FALSE,
-      'video' => FALSE,
-      'workshop' => FALSE,
-    ),
-    'advanced_view' => '--',
-    'advanced_view_args' => '',
+    'save_term_node' => 1,
+    'vid' => '4',
+    'parent' => '0',
+    'parent_php_code' => '',
+    'depth' => '',
+    'reference_preview' => '',
     'widget' => array(
-      'autocomplete_match' => 'contains',
-      'size' => '60',
+      'new_terms' => 'insert',
+      'extra_parent' => '0',
+      'maxlength' => '255',
+      'active_tags' => NULL,
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
       'default_value' => NULL,
       'default_value_php' => NULL,
-      'label' => 'Beteiligung als Umsetungspartner',
-      'weight' => '37',
+      'label' => 'Berufsgruppen',
+      'weight' => '40',
       'description' => '',
-      'type' => 'nodereference_select',
-      'module' => 'nodereference',
+      'type' => 'content_taxonomy_autocomplete',
+      'module' => 'content_taxonomy_autocomplete',
+    ),
+  );
+
+  // Exported field: field_branchen
+  $fields['project-field_branchen'] = array(
+    'field_name' => 'field_branchen',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'weight' => '39',
+      'parent' => 'group_projectinfo',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'link',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'custom_formatters_content_taxonmy_field_multiple',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'content_taxonomy',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'content_taxonomy',
+    'active' => '1',
+    'save_term_node' => 1,
+    'vid' => '5',
+    'parent' => '0',
+    'parent_php_code' => '',
+    'depth' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'new_terms' => 'insert',
+      'extra_parent' => '0',
+      'maxlength' => '255',
+      'active_tags' => NULL,
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Branchen',
+      'weight' => '39',
+      'description' => '',
+      'type' => 'content_taxonomy_autocomplete',
+      'module' => 'content_taxonomy_autocomplete',
+    ),
+  );
+
+  // Exported field: field_faxnumber
+  $fields['project-field_faxnumber'] = array(
+    'field_name' => 'field_faxnumber',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'weight' => '28',
+      'parent' => 'group_projectcontact',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '20',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_faxnumber][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Faxnummer Ansprechpartner',
+      'weight' => '28',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
     ),
   );
 
@@ -1217,19 +2042,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_project_fg_membership',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '37',
+      'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1266,39 +2092,37 @@ function dlr_groups_content_default_fields() {
     'active' => '1',
     'referenceable_types' => array(
       'focusgroup' => 'focusgroup',
-      'balancewiki' => 0,
       'blog' => 0,
-      'gallery_image' => 0,
-      'conftoolgroup' => 0,
-      'definition' => 0,
-      'download' => 0,
-      'faq' => 0,
-      'forum' => 0,
-      'gallery' => 0,
-      'headerimage' => 0,
-      'image' => 0,
-      'link' => 0,
-      'simplenews' => 0,
-      'organisation' => 0,
-      'page' => 0,
-      'panel' => 0,
-      'pressemeldung' => 0,
-      'project' => 0,
-      'story' => 0,
-      'poll' => 0,
+      'book' => 0,
       'event' => 0,
-      'wiki' => 0,
-      'teststefan' => 0,
+      'exhibit' => 0,
+      'group' => 0,
+      'imageandhover' => 0,
+      'organisation' => 0,
+      'panel' => 0,
+      'profile' => 0,
+      'project' => 0,
+      'feed_ical_item' => 0,
+      'feed_ical' => 0,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
+    'reference_preview' => array(
+      'enable' => 1,
+      'type' => 'node-reference_preview',
+      'links' => 1,
+    ),
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => 60,
-      'default_value' => NULL,
+      'default_value' => array(
+        '0' => array(
+          'nid' => '',
+        ),
+      ),
       'default_value_php' => NULL,
       'label' => 'Mitglied in Fokusgruppe',
-      'weight' => '39',
+      'weight' => '37',
       'description' => '',
       'type' => 'nodereference_select',
       'module' => 'nodereference',
@@ -1310,19 +2134,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_project_rssfeed',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '31',
+      'parent' => 'group_projectcontact',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1371,11 +2196,12 @@ function dlr_groups_content_default_fields() {
     'title_value' => '',
     'enable_tokens' => 0,
     'validate_url' => 0,
+    'reference_preview' => '',
     'widget' => array(
       'default_value' => NULL,
       'default_value_php' => NULL,
       'label' => 'RSSFeed',
-      'weight' => '50',
+      'weight' => '31',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -1387,7 +2213,7 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projectaccount',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '34',
+      'weight' => '25',
       'parent' => 'group_projectcontact',
       'label' => array(
         'format' => 'above',
@@ -1413,13 +2239,15 @@ function dlr_groups_content_default_fields() {
     'active' => '1',
     'referenceable_roles' => array(
       '2' => 2,
-      '8' => 8,
-      '7' => 7,
-      '10' => 0,
+      '3' => 3,
+      '6' => 6,
+      '4' => 4,
+      '5' => 5,
     ),
-    'referenceable_status' => '1',
+    'referenceable_status' => '',
     'advanced_view' => '--',
     'advanced_view_args' => '',
+    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -1431,8 +2259,13 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
       'label' => 'Ansprechpartner/-in',
-      'weight' => '48',
+      'weight' => '25',
       'description' => '',
       'type' => 'realname_userreference_auto',
       'module' => 'realname_userreference',
@@ -1444,17 +2277,17 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projectapproach',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '35',
+      'weight' => '44',
       'parent' => 'group_projectfocus',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'plain_linebreaks',
         'exclude' => 0,
       ),
       '4' => array(
@@ -1468,16 +2301,18 @@ function dlr_groups_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => '10',
       'size' => 60,
       'default_value' => array(
         '0' => array(
           'value' => '',
+          'format' => '6',
           '_error_element' => 'default_value_widget][field_projectapproach][0][value',
         ),
       ),
@@ -1490,24 +2325,25 @@ function dlr_groups_content_default_fields() {
     ),
   );
 
-  // Exported field: field_projectemail
-  $fields['project-field_projectemail'] = array(
-    'field_name' => 'field_projectemail',
+  // Exported field: field_projectduration
+  $fields['project-field_projectduration'] = array(
+    'field_name' => 'field_projectduration',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '36',
+      'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1529,23 +2365,114 @@ function dlr_groups_content_default_fields() {
       ),
     ),
     'widget_active' => '1',
-    'type' => 'text',
+    'type' => 'date',
     'required' => '0',
     'multiple' => '0',
-    'module' => 'text',
+    'module' => 'date',
     'active' => '1',
-    'text_processing' => '',
-    'max_length' => '',
-    'allowed_values' => '',
-    'allowed_values_php' => '',
+    'granularity' => array(
+      'year' => 'year',
+      'month' => 'month',
+    ),
+    'timezone_db' => '',
+    'tz_handling' => 'none',
+    'todate' => 'optional',
+    'repeat' => 0,
+    'repeat_collapsed' => '',
+    'default_format' => 'long',
+    'reference_preview' => '',
     'widget' => array(
-      'rows' => NULL,
-      'size' => NULL,
-      'label' => 'Email Kontakt',
-      'weight' => '49',
+      'default_value' => 'blank',
+      'default_value_code' => '',
+      'default_value2' => 'same',
+      'default_value_code2' => '',
+      'input_format' => 'd.m.Y',
+      'input_format_custom' => '',
+      'increment' => '1',
+      'text_parts' => array(),
+      'year_range' => '-3:+3',
+      'label_position' => 'above',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'label' => 'Projektlaufzeit',
+      'weight' => '36',
       'description' => '',
-      'type' => 'text_textfield',
-      'module' => 'text',
+      'type' => 'date_popup',
+      'module' => 'date',
+    ),
+  );
+
+  // Exported field: field_projectemail
+  $fields['project-field_projectemail'] = array(
+    'field_name' => 'field_projectemail',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'weight' => '29',
+      'parent' => 'group_projectcontact',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'spamspan',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'spamspan',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'email',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'email',
+    'active' => '1',
+    'reference_preview' => '',
+    'widget' => array(
+      'size' => '50',
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => array(
+        '0' => array(
+          'email' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Email Kontakt',
+      'weight' => '29',
+      'description' => '',
+      'type' => 'email_textfield',
+      'module' => 'email',
     ),
   );
 
@@ -1554,7 +2481,7 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projectfkz',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '43',
+      'weight' => '35',
       'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
@@ -1594,6 +2521,7 @@ function dlr_groups_content_default_fields() {
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => 5,
       'size' => '20',
@@ -1605,7 +2533,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Förderkennzeichen (FKZ)',
-      'weight' => '36',
+      'weight' => '35',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -1617,7 +2545,7 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projecthomepage',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '32',
+      'weight' => '30',
       'parent' => 'group_projectcontact',
       'label' => array(
         'format' => 'above',
@@ -1645,6 +2573,7 @@ function dlr_groups_content_default_fields() {
       'target' => 'default',
       'rel' => '',
       'class' => '',
+      'title' => '',
     ),
     'display' => array(
       'url_cutoff' => '80',
@@ -1653,7 +2582,8 @@ function dlr_groups_content_default_fields() {
     'title' => 'optional',
     'title_value' => '',
     'enable_tokens' => 0,
-    'validate_url' => '',
+    'validate_url' => 1,
+    'reference_preview' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
@@ -1662,8 +2592,8 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Homepage',
-      'weight' => '47',
+      'label' => 'Webseite',
+      'weight' => '30',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -1675,18 +2605,18 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projectlogo',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '42',
+      'weight' => '41',
       'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
       ),
       'teaser' => array(
         'format' => 'projectlogo_9c_default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'projectlogo_9c_default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'image_plain',
@@ -1714,6 +2644,7 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => 'logos',
@@ -1729,19 +2660,19 @@ function dlr_groups_content_default_fields() {
       'title_type' => 'textfield',
       'default_image' => array(
         'filename' => 'logo_light.png',
-        'filepath' => 'sites/dlr.stage.wi1projects.com/files/imagefield_default_images/logo_light.png',
+        'filepath' => 'sites/dlr.wi1projects.com/files/imagefield_default_images/logo_light_0.png',
         'filemime' => 'image/png',
         'source' => 'default_image_upload',
-        'destination' => 'sites/dlr.stage.wi1projects.com/files/imagefield_default_images/logo_light.png',
+        'destination' => 'sites/dlr.wi1projects.com/files/imagefield_default_images/logo_light_0.png',
         'filesize' => 14445,
         'uid' => '1',
         'status' => 1,
-        'timestamp' => 1330501933,
-        'fid' => '4',
+        'timestamp' => 1340008888,
+        'fid' => '47',
       ),
       'use_default_image' => 1,
       'label' => 'Projektlogo',
-      'weight' => '37',
+      'weight' => '41',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -1753,18 +2684,18 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projectmembers',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '46',
+      'weight' => '44',
       'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
       ),
       'teaser' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1791,14 +2722,15 @@ function dlr_groups_content_default_fields() {
     'active' => '1',
     'referenceable_roles' => array(
       '2' => 2,
+      '6' => 6,
+      '4' => 4,
+      '5' => 5,
       '3' => 0,
-      '6' => 0,
-      '4' => 0,
-      '5' => 0,
     ),
     'referenceable_status' => '1',
     'advanced_view' => '--',
     'advanced_view_args' => '',
+    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -1811,7 +2743,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Personen im Projekt',
-      'weight' => '38',
+      'weight' => '44',
       'description' => '',
       'type' => 'realname_userreference_auto',
       'module' => 'realname_userreference',
@@ -1823,17 +2755,17 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projecttechniques',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '36',
-      'parent' => 'group_projectfocus',
+      'weight' => '43',
+      'parent' => 'group_methods',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'plain_linebreaks',
         'exclude' => 0,
       ),
       '4' => array(
@@ -1847,22 +2779,24 @@ function dlr_groups_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => '10',
       'size' => 60,
       'default_value' => array(
         '0' => array(
           'value' => '',
+          'format' => '6',
           '_error_element' => 'default_value_widget][field_projecttechniques][0][value',
         ),
       ),
       'default_value_php' => NULL,
       'label' => 'Methoden',
-      'weight' => '45',
+      'weight' => '43',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1874,17 +2808,17 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projecttheories',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '34',
-      'parent' => 'group_projectfocus',
+      'weight' => '40',
+      'parent' => 'group_grouptheories',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'plain_linebreaks',
         'exclude' => 0,
       ),
       '4' => array(
@@ -1898,22 +2832,24 @@ function dlr_groups_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => '5',
       'size' => 60,
       'default_value' => array(
         '0' => array(
           'value' => '',
+          'format' => '6',
           '_error_element' => 'default_value_widget][field_projecttheories][0][value',
         ),
       ),
       'default_value_php' => NULL,
       'label' => 'Theorien / theoretische Grundlagen',
-      'weight' => '43',
+      'weight' => '40',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1925,17 +2861,17 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_projektgoals',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '44',
-      'parent' => 'group_projectinfo',
+      'weight' => '8',
+      'parent' => 'group_projektziele',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'plain_linebreaks',
         'exclude' => 0,
       ),
       '4' => array(
@@ -1949,22 +2885,29 @@ function dlr_groups_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
       'rows' => '10',
       'size' => 60,
       'default_value' => array(
         '0' => array(
           'value' => '',
+          'format' => '6',
           '_error_element' => 'default_value_widget][field_projektgoals][0][value',
         ),
       ),
       'default_value_php' => NULL,
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
       'label' => 'Projektziele / Angestrebtes Ergebnis',
-      'weight' => '38',
+      'weight' => '8',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1976,19 +2919,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_ref_projectinstitutions',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '16',
+      'parent' => 'group_beteiligteinstitutionen',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'views_dlr_groups_org_ref_formatter_reference_field_1',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'views_dlr_groups_org_ref_formatter_reference_field_1',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -2028,9 +2972,11 @@ function dlr_groups_content_default_fields() {
       'blog' => 0,
       'book' => 0,
       'event' => 0,
+      'exhibit' => 0,
       'focusgroup' => 0,
       'group' => 0,
-      'simplenews' => 0,
+      'imageandhover' => 0,
+      'panel' => 0,
       'profile' => 0,
       'project' => 0,
       'feed_ical_item' => 0,
@@ -2038,6 +2984,11 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
+    'reference_preview' => array(
+      'enable' => 1,
+      'type' => 'node-reference_preview',
+      'links' => 1,
+    ),
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -2048,8 +2999,8 @@ function dlr_groups_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Institutionen im Projektkonsortium',
-      'weight' => '40',
+      'label' => 'Verbundprojektpartner',
+      'weight' => '16',
       'description' => '',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
@@ -2061,19 +3012,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_ref_valuepartner',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '17',
+      'parent' => 'group_beteiligteinstitutionen',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'views_dlr_groups_org_ref_formatter_reference_field_1',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'views_dlr_groups_org_ref_formatter_reference_field_1',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -2113,9 +3065,11 @@ function dlr_groups_content_default_fields() {
       'blog' => 0,
       'book' => 0,
       'event' => 0,
+      'exhibit' => 0,
       'focusgroup' => 0,
       'group' => 0,
-      'simplenews' => 0,
+      'imageandhover' => 0,
+      'panel' => 0,
       'profile' => 0,
       'project' => 0,
       'feed_ical_item' => 0,
@@ -2123,6 +3077,11 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
+    'reference_preview' => array(
+      'enable' => 1,
+      'type' => 'node-reference_preview',
+      'links' => 1,
+    ),
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -2134,7 +3093,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Value Partner',
-      'weight' => '42',
+      'weight' => '17',
       'description' => '',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
@@ -2146,17 +3105,17 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_researchquestions',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '33',
-      'parent' => 'group_projectfocus',
+      'weight' => '41',
+      'parent' => 'group_researchquestions',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'plain_linebreaks',
         'exclude' => 0,
       ),
       '4' => array(
@@ -2179,15 +3138,16 @@ function dlr_groups_content_default_fields() {
     'widget_active' => '1',
     'type' => 'text',
     'required' => '0',
-    'multiple' => '1',
+    'multiple' => '0',
     'module' => 'text',
     'active' => '1',
     'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
+    'reference_preview' => '',
     'widget' => array(
-      'rows' => 5,
+      'rows' => '5',
       'size' => '60',
       'default_value' => array(
         '0' => array(
@@ -2197,9 +3157,9 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Forschungsfragen',
-      'weight' => '42',
+      'weight' => '41',
       'description' => '',
-      'type' => 'text_textfield',
+      'type' => 'text_textarea',
       'module' => 'text',
     ),
   );
@@ -2209,19 +3169,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_steckbrief',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '43',
+      'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -2259,6 +3220,7 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'txt doc doc docx pdf',
       'file_path' => '',
@@ -2266,7 +3228,7 @@ function dlr_groups_content_default_fields() {
       'max_filesize_per_file' => '20M',
       'max_filesize_per_node' => '',
       'label' => 'Steckbrief aus Konferenzband',
-      'weight' => '40',
+      'weight' => '43',
       'description' => '',
       'type' => 'filefield_widget',
       'module' => 'filefield',
@@ -2278,7 +3240,7 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_synopsis',
     'type_name' => 'project',
     'display_settings' => array(
-      'weight' => '45',
+      'weight' => '42',
       'parent' => 'group_projectinfo',
       'label' => array(
         'format' => 'above',
@@ -2317,6 +3279,7 @@ function dlr_groups_content_default_fields() {
     'list_field' => '0',
     'list_default' => 1,
     'description_field' => '0',
+    'reference_preview' => '',
     'widget' => array(
       'file_extensions' => 'pdf',
       'file_path' => 'synopses',
@@ -2324,10 +3287,153 @@ function dlr_groups_content_default_fields() {
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
       'label' => 'Projektexposé',
-      'weight' => '39',
+      'weight' => '42',
       'description' => '',
       'type' => 'filefield_widget',
       'module' => 'filefield',
+    ),
+  );
+
+  // Exported field: field_tags
+  $fields['project-field_tags'] = array(
+    'field_name' => 'field_tags',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'weight' => '38',
+      'parent' => 'group_projectinfo',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'link',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'custom_formatters_content_taxonmy_field_multiple',
+        'exclude' => 0,
+      ),
+      'reference_preview' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'content_taxonomy',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'content_taxonomy',
+    'active' => '1',
+    'save_term_node' => 1,
+    'vid' => '2',
+    'parent' => '0',
+    'parent_php_code' => '',
+    'depth' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'new_terms' => 'insert',
+      'extra_parent' => '0',
+      'maxlength' => '255',
+      'active_tags' => NULL,
+      'wysiwyg_fields_status' => 0,
+      'wysiwyg_fields_icon' => '6f7621a02161e347e66d99d8ace540a3',
+      'wysiwyg_fields_formatters' => array(),
+      'wysiwyg_fields_hide' => 1,
+      'wysiwyg_fields_delete' => 1,
+      'default_value' => NULL,
+      'default_value_php' => NULL,
+      'label' => 'Schlagwörter',
+      'weight' => '38',
+      'description' => '',
+      'type' => 'content_taxonomy_autocomplete',
+      'module' => 'content_taxonomy_autocomplete',
+    ),
+  );
+
+  // Exported field: field_telephonenumber
+  $fields['project-field_telephonenumber'] = array(
+    'field_name' => 'field_telephonenumber',
+    'type_name' => 'project',
+    'display_settings' => array(
+      'weight' => '27',
+      'parent' => 'group_projectcontact',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'reference_preview' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '20',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_telephonenumber][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Telefonnummer Ansprechpartner',
+      'weight' => '27',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
     ),
   );
 
@@ -2336,19 +3442,20 @@ function dlr_groups_content_default_fields() {
     'field_name' => 'field_umsetzungspartner',
     'type_name' => 'project',
     'display_settings' => array(
+      'weight' => '13',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -2390,6 +3497,7 @@ function dlr_groups_content_default_fields() {
     ),
     'advanced_view' => 'dlr_groups_noderefprev_org',
     'advanced_view_args' => '',
+    'reference_preview' => '',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => '60',
@@ -2401,7 +3509,7 @@ function dlr_groups_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Umsetzungspartner',
-      'weight' => '41',
+      'weight' => '13',
       'description' => '',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
@@ -2410,36 +3518,49 @@ function dlr_groups_content_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Adresse');
   t('Ansprechpartner/-in');
-  t('Beteiligung als Umsetungspartner');
-  t('Betreuung BALANCE');
-  t('Betreuung DLR');
-  t('Bild Betreuer DLR');
+  t('Ansprechpartner/in (ohne Benutzerkonto)');
+  t('Berufsgruppen');
+  t('Betreuer beim Metaprojekt „DemoScreen“');
+  t('Bild');
+  t('Branchen');
+  t('Email');
   t('Email Kontakt');
   t('Farbcode');
+  t('Faxnummer Ansprechpartner');
   t('Fokusgruppensprecher');
+  t('Fokusgruppensprecher (ohne Benutzeraccount)');
   t('Forschungsfragen');
   t('Förderkennzeichen (FKZ)');
   t('Hintergrundbild für die Startseite');
-  t('Homepage');
-  t('Institutionen im Projektkonsortium');
   t('Kürzel');
   t('Logo');
   t('Methoden');
   t('Mitglied in Fokusgruppe');
-  t('Mitgliedschaft in Projekten');
-  t('Ort');
+  t('Mitglieder dieser Organisation');
+  t('Name');
   t('Personen im Projekt');
   t('Projekte');
   t('Projektexposé');
+  t('Projektlaufzeit');
   t('Projektlogo');
   t('Projektziele / Angestrebtes Ergebnis');
   t('RSSFeed');
+  t('Schlagwörter');
   t('Steckbrief aus Konferenzband');
+  t('Telefon');
+  t('Telefonnummer Ansprechpartner');
   t('Theorien / theoretische Grundlagen');
   t('Umsetzungspartner');
+  t('Umsetzungspartner in folgenden Projekten');
   t('Value Partner');
+  t('Value Partner in folgenden Projekten');
+  t('Verbundprojektpartner');
+  t('Verbundprojektpartner in folgenden Projekten');
   t('Vorgehen');
+  t('Webseite');
+  t('Webseite der Organisation');
 
   return $fields;
 }
