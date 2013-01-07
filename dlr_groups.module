@@ -25,12 +25,45 @@ function dlr_groups_form_alter(&$form, $form_state, $form_id) {
   switch ($form_id) {
     // This is our form ID.
     case 'project_node_form':
-      // Increased the project og description max size
-      $form['og_description']['#maxlength'] = 512;
+      dlr_groups_project_node_form($form, $form_state, $form_id);
       break;
+    
     case 'focusgroup_node_form':
-      // Increased the project og description max size
-      unset($form['og_description']);
+      dlr_groups_focusgroup_node_form($form, $form_state, $form_id);
       break;
+    
   }
+}
+
+
+/**
+* Custom theme override for edit focusgroup node form.
+*
+* Calling it from hook_form_alter used above
+*/
+
+function dlr_groups_focusgroup_node_form(&$form, $form_state, $form_id) {
+  // Increased the project og description max size
+  unset($form['og_description']);
+ 
+  unset($form['buttons']['preview']);
+  unset($form['buttons']['preview-changes']);
+  $form['spaces_preset']['#access'] = FALSE;
+  
+}
+
+/**
+* Custom theme override for edit project node form.
+*
+* Calling it from hook_form_alter used above
+*/
+
+function  dlr_groups_project_node_form(&$form, $form_state, $form_id) {
+  // Increased the project og description max size
+  $form['og_description']['#maxlength'] = 512;
+ 
+  unset($form['buttons']['preview']);
+  unset($form['buttons']['preview_changes']);
+  $form['spaces_preset']['#access'] = FALSE;
+
 }
