@@ -47,7 +47,7 @@ function dlr_groups_focusgroup_node_form(&$form, $form_state, $form_id) {
   unset($form['og_description']);
  
   unset($form['buttons']['preview']);
-  unset($form['buttons']['preview-changes']);
+  unset($form['buttons']['preview_changes']);
   $form['spaces_preset']['#access'] = FALSE;
   
 }
