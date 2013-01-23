@@ -67,3 +67,73 @@ function  dlr_groups_project_node_form(&$form, $form_state, $form_id) {
   $form['spaces_preset']['#access'] = FALSE;
 
 }
+
+/**
+ * Implementation of hook_views_pre_render().
+ * 
+ * Changing the views used by OG to look for node reference fields ( child groups) and include them in the results
+ * 
+ */
+
+
+/**
+ * Implementation of hook_views_post_render().
+ * 
+ * Changing the view to include results from other views in them. Member listing of focusgroups shows views of all members 
+ * from child projects as well beneath the original view
+ * 
+ */
+function dlr_groups_views_post_render(&$view, &$output, &$cache) {
+  if($view->name == "members_listing") {
+      $active_space = spaces_get_space();
+      $parentgroupnode = node_load($active_space->id);
+      $children = _nodehierarchy_get_children_menu_links($parentgroupnode->nid);
+      foreach($children as $child){
+        $tempout = views_embed_view('members_listing_og', $view->current_display, $child['nid']);
+        $output = $output.$tempout;
+      }
+  }
+}
+
+/**
+ * Implementation of hook_views_pre_view().
+ * 
+ * Used to change filters of some views
+ * 
+ */
+
+function dlr_groups_views_pre_view(&$view, &$display_id, &$args) {
+  switch ($view->name) {
+    case 'blog_listing':
+    case 'calendar_listing': {
+        // These two views have been modified to include an og filter. For hierarchial groups, the spaces filter is disabled and og filter is given values of group and its sub-groups
+        $spaces_preset = spaces_preset_load();
+        if ($spaces_preset['demoscreen_groups']->disabled)
+          continue;
+
+        //Check if spaces is used with node hierarchy. If not then continue.      
+        $active_space = spaces_get_space();
+        $parentgroupnode = node_load($active_space->id);
+        $children = _nodehierarchy_get_children_menu_links($parentgroupnode->nid);
+        $requireddisplay = $view->current_display;
+        if (empty($children))
+          continue; 
+
+        // Overwrite the filters. Remove spaces and add organic groups.
+        $view_filters = $view->display_handler->get_option('filters');
+        // Check if organic groups filter is set. If not, then continue       
+        if(!isset($view_filters['group_nid']))
+          continue;
+        
+        $view_filters['group_nid']['value'] = array();
+        $view_filters['group_nid']['value'][$parentgroupnode->nid] = $parentgroupnode->nid;
+        foreach ($children as $child) {
+          $view_filters['group_nid']['value'][$child['nid']] = $child['nid'];
+        }
+
+        unset($view_filters['current']);
+        $view->display_handler->override_option('filters', $view_filters);
+        break;
+      }
+  }
+}
