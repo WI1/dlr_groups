@@ -26,6 +26,7 @@ function dlr_groups_form_alter(&$form, $form_state, $form_id) {
     // This is our form ID.
     case 'project_node_form':
       dlr_groups_project_node_form($form, $form_state, $form_id);
+      $form['group_projectinfo']['field_projectduration']['#pre_render'] = array('dlr_groups_project_date_label');
       break;
     
     case 'focusgroup_node_form':
@@ -35,6 +36,14 @@ function dlr_groups_form_alter(&$form, $form_state, $form_id) {
   }
 }
 
+/**
+ *  Updates date labels on project node form.
+ */
+function dlr_groups_project_date_label($element) {
+  $element[0]['value']['#title'] = t('Starting Date');
+  $element[0]['value2']['#title'] = t('Ending Date');
+  return $element;
+}
 
 /**
 * Custom theme override for edit focusgroup node form.
@@ -43,6 +52,7 @@ function dlr_groups_form_alter(&$form, $form_state, $form_id) {
 */
 
 function dlr_groups_focusgroup_node_form(&$form, $form_state, $form_id) {
+  
   // Increased the project og description max size
   unset($form['og_description']);
  
@@ -64,7 +74,10 @@ function  dlr_groups_project_node_form(&$form, $form_state, $form_id) {
  
   unset($form['buttons']['preview']);
   unset($form['buttons']['preview_changes']);
-  $form['spaces_preset']['#access'] = FALSE;
+  global $user;
+  if (!in_array('administrator', $user->roles)) 
+    $form['spaces_preset']['#access'] = FALSE;
+  
 
 }
 
