@@ -135,8 +135,8 @@ function dlr_groups_views_pre_view(&$view, &$display_id, &$args) {
         // Overwrite the filters. Remove spaces and add organic groups.
         $view_filters = $view->display_handler->get_option('filters');
         // Check if organic groups filter is set. If not, then continue       
-        if(!isset($view_filters['group_nid']))
-          continue;
+ //       if(!isset($view_filters['group_nid']))
+ //         continue;
         
         $view_filters['group_nid']['value'] = array();
         $view_filters['group_nid']['value'][$parentgroupnode->nid] = $parentgroupnode->nid;
