@@ -2,37 +2,33 @@
 
 include_once('dlr_groups.features.inc');
 
-
-
 /**
  * Implementation of hook_menu_alter().
  * 
  * Hide certain menu items that appear as tabs.
  * 
  */
-function dlr_groups_menu_alter(&$items){
+function dlr_groups_menu_alter(&$items) {
   $items['node/%node/buildmodes']['type'] = MENU_CALLBACK;
   $items['node/%node/features']['type'] = MENU_CALLBACK;
 }
-
 
 /**
  * Implementation of hook_form_alter().
  */
 function dlr_groups_form_alter(&$form, $form_state, $form_id) {
- // $form['#action']  = explode('search', $form['#action']); 
-  
+  // $form['#action']  = explode('search', $form['#action']); 
+
   switch ($form_id) {
     // This is our form ID.
     case 'project_node_form':
       dlr_groups_project_node_form($form, $form_state, $form_id);
       $form['group_projectinfo']['field_projectduration']['#pre_render'] = array('dlr_groups_project_date_label');
       break;
-    
+
     case 'focusgroup_node_form':
       dlr_groups_focusgroup_node_form($form, $form_state, $form_id);
       break;
-    
   }
 }
 
@@ -46,48 +42,70 @@ function dlr_groups_project_date_label($element) {
 }
 
 /**
-* Custom theme override for edit focusgroup node form.
-*
-* Calling it from hook_form_alter used above
-*/
-
+ * Custom theme override for edit focusgroup node form.
+ *
+ * Calling it from hook_form_alter used above
+ */
 function dlr_groups_focusgroup_node_form(&$form, $form_state, $form_id) {
-  
+
   // Increased the project og description max size
   unset($form['og_description']);
- 
+
   unset($form['buttons']['preview']);
   unset($form['buttons']['preview_changes']);
   $form['spaces_preset']['#access'] = FALSE;
-  
 }
 
 /**
-* Custom theme override for edit project node form.
-*
-* Calling it from hook_form_alter used above
-*/
-
-function  dlr_groups_project_node_form(&$form, $form_state, $form_id) {
+ * Custom theme override for edit project node form.
+ *
+ * Calling it from hook_form_alter used above
+ */
+function dlr_groups_project_node_form(&$form, $form_state, $form_id) {
   // Increased the project og description max size
   $form['og_description']['#maxlength'] = 512;
- 
+
   unset($form['buttons']['preview']);
   unset($form['buttons']['preview_changes']);
   global $user;
-  if (!in_array('administrator', $user->roles)) 
+  if (!in_array('administrator', $user->roles))
     $form['spaces_preset']['#access'] = FALSE;
-  
-
 }
 
 /**
  * Implementation of hook_views_pre_render().
  * 
  * Changing the views used by OG to look for node reference fields ( child groups) and include them in the results
- * 
+ * && $view->current_display == 'MYDISPLAYNAME'
  */
-
+function dlr_groups_views_pre_render(&$view) {
+  if ($view->name == 'groups_listing' && 
+          ($view->current_display == 'block_2' || $view->current_display == 'default' )) {
+    $fg_view = views_get_view('focusgroups_listing', TRUE); // <--- not sure if TRUE (reset) is required
+    if ($fg_view) {
+      $fg_view->set_display('block_2'); // <--- important
+      $fg_view->execute();
+      foreach ($fg_view->result as $fg) {
+        $duplicate = false;
+        foreach ($view->result as $group) {
+           if($group->nid == $fg->node_nh_parent_nid)
+             $duplicate = true;
+        }
+        if(!$duplicate){
+          // format the fg to fit with groups_listing and merge without duplicates
+          $fg->nid = $fg->node_nh_parent_nid;
+          $fg->node_type = $fg->node_nh_parent_type;
+          $fg->node_vid = $fg->node_nh_parent_vid;
+          $fg->node_title = $fg->node_nh_parent_title;
+          // format the fg to fit with groups_listing
+          array_push($view->result, $fg);
+        }
+          
+      }
+      // $view->result = array_merge($view->result, $fg_view->result);
+    }
+  }
+}
 
 /**
  * Implementation of hook_views_post_render().
@@ -97,24 +115,26 @@ function  dlr_groups_project_node_form(&$form, $form_state, $form_id) {
  * 
  */
 function dlr_groups_views_post_render(&$view, &$output, &$cache) {
-  if($view->name == "members_listing") {
-      $active_space = spaces_get_space();
-      $parentgroupnode = node_load($active_space->id);
-      $children = _nodehierarchy_get_children_menu_links($parentgroupnode->nid);
-      foreach($children as $child){
-        $tempout = views_embed_view('members_listing_og', $view->current_display, $child['nid']);
-        $output = $output.$tempout;
-      }
+  if ($view->name == "members_listing") {
+    $active_space = spaces_get_space();
+    $parentgroupnode = node_load($active_space->id);
+    $children = _nodehierarchy_get_children_menu_links($parentgroupnode->nid);
+    foreach ($children as $child) {
+      $tempout = views_embed_view('members_listing_og', $view->current_display, $child['nid']);
+      $output = $output . $tempout;
+    }
   }
 }
 
 /**
  * Implementation of hook_views_pre_view().
  * 
- * Used to change filters of some views
+ * This function is used to modify views used in organic groups to take into account the focusgroup project relationship. 
+ * 
+ * It unsets the spaces filter and sets the organic group filter to show nodes belonging to the og and all it's node hierarchial 
+ * child organic nodes. This will only work when the Organic group, group filter is enabled already in the view.
  * 
  */
-
 function dlr_groups_views_pre_view(&$view, &$display_id, &$args) {
   switch ($view->name) {
     case 'blog_listing':
@@ -130,14 +150,14 @@ function dlr_groups_views_pre_view(&$view, &$display_id, &$args) {
         $children = _nodehierarchy_get_children_menu_links($parentgroupnode->nid);
         $requireddisplay = $view->current_display;
         if (empty($children))
-          continue; 
+          continue;
 
         // Overwrite the filters. Remove spaces and add organic groups.
         $view_filters = $view->display_handler->get_option('filters');
         // Check if organic groups filter is set. If not, then continue       
-        if(!isset($view_filters['group_nid']))
+        if (!isset($view_filters['group_nid']))
           continue;
-        
+
         $view_filters['group_nid']['value'] = array();
         $view_filters['group_nid']['value'][$parentgroupnode->nid] = $parentgroupnode->nid;
         foreach ($children as $child) {
@@ -147,6 +167,9 @@ function dlr_groups_views_pre_view(&$view, &$display_id, &$args) {
         unset($view_filters['current']);
         $view->display_handler->override_option('filters', $view_filters);
         break;
+      }
+    case 'groups_listing': {
+        
       }
   }
 }
