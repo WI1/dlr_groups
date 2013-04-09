@@ -79,7 +79,7 @@ function dlr_groups_project_node_form(&$form, $form_state, $form_id) {
  * && $view->current_display == 'MYDISPLAYNAME'
  */
 function dlr_groups_views_pre_render(&$view) {
-  if ($view->name == 'groups_listing' && 
+  if ($view->name == 'groups_listing' &&
           ($view->current_display == 'block_2' || $view->current_display == 'default' )) {
     $fg_view = views_get_view('focusgroups_listing', TRUE); // <--- not sure if TRUE (reset) is required
     if ($fg_view) {
@@ -88,10 +88,10 @@ function dlr_groups_views_pre_render(&$view) {
       foreach ($fg_view->result as $fg) {
         $duplicate = false;
         foreach ($view->result as $group) {
-           if($group->nid == $fg->node_nh_parent_nid)
-             $duplicate = true;
+          if ($group->nid == $fg->node_nh_parent_nid)
+            $duplicate = true;
         }
-        if(!$duplicate){
+        if (!$duplicate) {
           // format the fg to fit with groups_listing and merge without duplicates
           $fg->nid = $fg->node_nh_parent_nid;
           $fg->node_type = $fg->node_nh_parent_type;
@@ -100,11 +100,22 @@ function dlr_groups_views_pre_render(&$view) {
           // format the fg to fit with groups_listing
           array_push($view->result, $fg);
         }
-          
       }
+      $view->result = subval_sort($view->result, 'node_title');
       // $view->result = array_merge($view->result, $fg_view->result);
     }
   }
+}
+
+function subval_sort($a, $subkey) {
+	foreach($a as $k=>$v) {
+		$b[$k] = strtolower($v->$subkey);
+	}
+	asort($b);
+	foreach($b as $key=>$val) {
+		$c[] = $a[$key];
+	}
+	return $c;
 }
 
 /**
