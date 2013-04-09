@@ -102,6 +102,7 @@ function dlr_groups_views_pre_render(&$view) {
         }
       }
       $view->result = subval_sort($view->result, 'node_title');
+      $view->result = subval_sort($view->result, 'node_type');
       // $view->result = array_merge($view->result, $fg_view->result);
     }
   }
