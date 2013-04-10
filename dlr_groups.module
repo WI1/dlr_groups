@@ -80,7 +80,9 @@ function dlr_groups_project_node_form(&$form, $form_state, $form_id) {
  */
 function dlr_groups_views_pre_render(&$view) {
   if ($view->name == 'groups_listing' &&
-          ($view->current_display == 'block_2' || $view->current_display == 'default' )) {
+          ($view->current_display == 'block_2' || 
+          $view->current_display == 'default' ||
+          $view->current_display == 'block_1')) {
     $fg_view = views_get_view('focusgroups_listing', TRUE); // <--- not sure if TRUE (reset) is required
     if ($fg_view) {
       $fg_view->set_display('block_2'); // <--- important
