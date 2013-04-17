@@ -99,6 +99,9 @@ function dlr_groups_views_pre_render(&$view) {
           $fg->node_type = $fg->node_nh_parent_type;
           $fg->node_vid = $fg->node_nh_parent_vid;
           $fg->node_title = $fg->node_nh_parent_title;
+          $fg->node_data_field_projectlogo_field_projectlogo_fid = $fg->node_nh_parent_node_data_field_projectlogo_field_projectlogo_fid;
+          $fg->node_data_field_projectlogo_field_projectlogo_list = $fg->node_nh_parent_node_data_field_projectlogo_field_projectlogo_list;
+          $fg->node_data_field_projectlogo_field_projectlogo_data = $fg->node_nh_parent_node_data_field_projectlogo_field_projectlogo_data;
           // format the fg to fit with groups_listing
           array_push($view->result, $fg);
         }
