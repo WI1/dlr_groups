@@ -53,7 +53,8 @@ function dlr_groups_focusgroup_node_form(&$form, $form_state, $form_id) {
 
   unset($form['buttons']['preview']);
   unset($form['buttons']['preview_changes']);
-  $form['spaces_preset']['#access'] = FALSE;
+  if (!in_array('administrator', $user->roles))
+    $form['spaces_preset']['#access'] = FALSE;
 }
 
 /**
@@ -83,9 +84,19 @@ function dlr_groups_views_pre_render(&$view) {
           ($view->current_display == 'block_2' || 
           $view->current_display == 'default' ||
           $view->current_display == 'block_1')) {
+    // In these views, the focusgroups of the projects should also be displayed
     $fg_view = views_get_view('focusgroups_listing', TRUE); // <--- not sure if TRUE (reset) is required
-    if ($fg_view) {
+    if ($view->current_display == 'block_1'){
+      // This is for the block that shows projects and focusgroups of a user. The user is passed as an argument and needs
+      //  to get passed to focusgroups_listing too.
+      // Passing the user id argument and setting the right display 
+      $fg_views->args = $views->args;
+      $fg_view->set_display('block_1'); // <--- important
+    } else {
       $fg_view->set_display('block_2'); // <--- important
+    }    
+    if ($fg_view) {
+      
       $fg_view->execute();
       foreach ($fg_view->result as $fg) {
         $duplicate = false;
